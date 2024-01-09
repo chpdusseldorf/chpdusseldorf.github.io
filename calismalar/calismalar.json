@@ -1,0 +1,35 @@
+{
+    "calismalar":[
+        {
+            "img":"anayasasahip-bg.webp",
+            "date":"14.01.2024",
+            "title":"Anayasana Sahip Çık!",
+            "text":"Geleceğimize sahip çıkmak için tüm yurttaşlarımızı 14 Ocak Pazar günü saat 13:00'te, Ankara Tandoğan meydanına davet ediyoruz. Biz geleceğimize #sahipçıkıyoruz",
+            "summary":"Geleceğimize sahip çıkmak için tüm yurttaşlarımızı 14 Ocak Pazar günü saat 13:00'te, Ankara Tandoğan meydanına davet ediyoruz. Biz geleceğimize #sahipçıkıyoruz"
+        },
+        
+        {
+            "img":"yapmangerekenyedisey.webp",
+            "date":"01.01.2024",
+            "title":"İşte Almanya'ya ilk adımından itibaren yapman gereken 7 şey!",
+            "text":"Vatanından ayrılmak, bütün hayatını geride bırakıp, hiç bilmediğin bir ülkede, tanımadığın insanlarla yeni bir hayata başlamak hiç kolay değildir. Böyle zor bir karan alabildiğin için çok cesursun. Yeni hayat, yeni umutlar, yeni heyecanlar ve yeni zorluklar Hepimiz o yollardan geçtik, ne kadar zor olduğunu hepimiz çok iyi biliyoruz, seni çok iyi anlıyoruz. Her ne nedenden gelmiş olursan ol, kim olursan ol, bu zorluklara karşı yalnız olmadığını bilmeni isterim. Ne zaman yalnız kalırsan, umudunu kaybedersen, Cumhuriyet Halk Partisi, her zaman, her saniye ve her yerde senin yanında Cumhuriyet Halk Partisinin kapısının sana her daim açık olduğunu bilmeni isterim. Almanya'ya ilk adımından itibaren yapman gereken 7 şeyi Gençlik Kolları sosyal medya hesaplarımızda bulabilirsin. Willkommen in Deutschland, Almanya'ya hoş geldin",
+            "summary":"Almanya'ya hoş geldin! Willkommen in Deutschland!"
+        },
+
+        {
+            "img":"yuzyiletkinlik.webp",
+            "date":"29.10.2023",
+            "title":"CHP Düsseldorf ve Çevresi Birliği 100. Yıl Kutlamaları",
+            "text":"CHP Düsseldorf ve Çevresi Birliği olarak Cumhuriyetimiz'in 100. Yılında başta Ulu Önder Mustafa Kemal Atatürk olmak üzere bütün kahramanlarımızı saygı ile anıyoruz.",
+            "summary":"CHP Düsseldorf 100. yıl kutlamaları."
+        },
+
+        {
+            "img":"deprem.webp",
+            "date":"06.02.2023",
+            "title":"Gün Birlik Günü",
+            "text":"6 Şubat Depreminden etkilenen vatandaşlarımız için yaptığımız yardım çalışmamızda emeği geçen bütün herkese teşekkür ediyor, depremden etkilenen vatandaşlarımızın her zaman yanında olduğumuzu ve sorumlulardan hesap soracağımızı belirtmek istiyoruz.",
+            "summary":"6 Şubat Depreminden etkilenen vatandaşlarımız için Almanya'dan bir tır eşya gönderdik."
+        }
+    ]
+}
