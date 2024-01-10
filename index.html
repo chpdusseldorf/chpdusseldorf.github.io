@@ -73,10 +73,11 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 60vh 45vh 35vh 70vh 10vh;
+        grid-template-rows: 20vh 60vh 45vh 45vh 35vh 70vh 10vh;
         grid-template-areas: 
         "header"
         "main"
+        "canli"
         "gundem"
         "bizekatil"
         "iletisim"
@@ -107,6 +108,17 @@ html, body {
         width: 100%;
         height: 100%;
 
+    }
+
+    .canliFrame{
+        width: 65%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
     }
 
     .gundemFrame{
@@ -220,10 +232,16 @@ html, body {
         <div class="headerFrame"></div>
 
         <div class="mainImgFrame">
-            <a href="https://chpdusseldorfcevresi.de/calismalar" style="height: 75%;width: 100%;"><div class="imgFrame" id="imgFrame"></div></a>
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" style="height: 75%;width: 100%;"><div class="imgFrame" id="imgFrame"></div></a>
             <p class="calismaDate" id="calismaDate" style="margin-left: 10px;">02.04.2023</p>
             <h2 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold; text-transform: capitalize; margin-left: 10px;margin-top: -10px;">Hoş Geldin..!</h2>
             <p class="calismaText" id="calismaText" style="font-family: Gotham; margin-top: -15px; color: rgb(59, 59, 59); margin-left: 10px;">Sen de bize katıl ve yeni yüzyılda Türkiye'yi birlikte inşaa edelim!</p>
+        </div>
+
+        <div class="canliFrame">
+            <h2 style="font-family: GothamBold;">Canlı Yayın - Anayasa Mitingi 14 Ocak Pazar günü saat 11.00 #sahipçıkıyoruz</h2>
+            <iframe width="80%" height="90%" src="https://www.youtube.com/embed/I6KM73QZfaA?si=HiU35HAinMje4ZXT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="line2" style="margin-top: 30px;"></div>
         </div>
 
         <div class="gundemFrame">
@@ -249,7 +267,7 @@ html, body {
 
                 <div class="line2" style="margin-bottom: 30px;"></div>
 
-                <a href="https://chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
                 
                 <p>Geçmişin Mirasıyla Yeni Yüzyıl'da Umut, Huzur, Adalet Dolu</p>
                 <p style="margin-top: -10px;" class="bizekatiltext">Türkiye'yi Birlikte İnşaa Edelim!</p>
