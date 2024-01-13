@@ -126,6 +126,7 @@ html, body {
         <div class="mainFrame">
            <div class="calismaFrame">
                 <div class="calismaImg" id="calismaImg"></div>
+                <video id="calismaVid" src="" type="video/mp4" controls></video>
                 <p class="calismaDate" id="calismaDate" style="color: gray; font-size: 12px;"></p>
                 <h3 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold;"></h3>
                 <p class="calismaText" id="calismaText"></p>
@@ -147,7 +148,18 @@ html, body {
                 function readJson(calismalar){
                     console.log(calismalar["calismalar"][calismaId])
 
-                    document.getElementById("calismaImg").style.backgroundImage = "url(calismalar/imgs/"+calismalar["calismalar"][calismaId]["img"]+")"
+                    if (calismalar["calismalar"][calismaId]["img"] == "") {
+                        document.getElementById("calismaImg").style.display = "none"
+                    }else{
+                        document.getElementById("calismaImg").style.backgroundImage = "url(calismalar/imgs/"+calismalar["calismalar"][calismaId]["img"]+")"
+                    }
+
+                    if (calismalar["calismalar"][calismaId]["vid"] == "") {
+                        document.getElementById("calismaVid").style.display = "none"
+                    }else{
+                        document.getElementById("calismaVid").src = "calismalar/vids/"+calismalar["calismalar"][calismaId]["vid"]
+                    }
+
                     document.getElementById("calismaDate").innerHTML = calismalar["calismalar"][calismaId]["date"]
                     document.getElementById("calismaTitle").innerHTML = calismalar["calismalar"][calismaId]["title"]
                     document.getElementById("calismaText").innerHTML = calismalar["calismalar"][calismaId]["text"]
