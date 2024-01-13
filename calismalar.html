@@ -8,7 +8,7 @@
 
         lemustache.net
         
-        .
+        
         
         --->
 
@@ -226,7 +226,13 @@ html, body {
 
                         calismaImg = document.createElement("div")
                         calismaImg.classList.add("calismaImg")
-                        calismaImg.style.backgroundImage =  "url(/calismalar/imgs/"+calismalar["calismalar"][i]["img"]+")"
+
+                        if (calismalar["calismalar"][i]["img"] == "") {
+                            calismaImg.style.backgroundImage =  "url(/calismalar/placeholder.webp)"
+                        }else{
+                            calismaImg.style.backgroundImage =  "url(/calismalar/imgs/"+calismalar["calismalar"][i]["img"]+")"
+                        }
+
                         calismaDiv.appendChild(calismaImg)
 
                         calismaDate = document.createElement("p")
