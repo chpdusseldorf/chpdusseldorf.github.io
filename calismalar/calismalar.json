@@ -2,6 +2,7 @@
     "calismalar":[
         {
             "img":"anayasasahip-bg.webp",
+            "vid":"",
             "date":"14.01.2024",
             "title":"Anayasana Sahip Çık!",
             "text":"Geleceğimize sahip çıkmak için tüm yurttaşlarımızı 14 Ocak Pazar günü saat 11:00'de, Anayasa Mitingine davet ediyoruz. Mitingi websitemizden veya resmi CHP sosyal medya hesaplarından takip edebilirsiniz. Biz geleceğimize #sahipçıkıyoruz",
@@ -11,6 +12,7 @@
         {
             "img":"fidan2-copy.webp",
             "date":"13.01.2024",
+            "vid":"",
             "title":"Sen de bir tohum ek!",
             "text":"CUMHURİYETİN TOHUMLARI ALMANYA'DA AÇIYOR! Sen de bize katıl, cumhuriyete, geleceğe, umuda #sendebirtohumek (Yeni katılan her üye için bir fidan bağışlanacaktır.) Üye olmak için; www.chpdusseldorfcevresi.de/bizekatil",
             "summary":"Geleceğimize sahip çıkmak için Anayasa Mitingi 14 Ocak Pazar günü saat 11:00'de! Biz geleceğimize #sahipçıkıyoruz!"
@@ -19,6 +21,7 @@
         {
             "img":"yapmangerekenyedisey.webp",
             "date":"01.01.2024",
+            "vid":"",
             "title":"İşte Almanya'ya ilk adımından itibaren yapman gereken 7 şey!",
             "text":"Vatanından ayrılmak, bütün hayatını geride bırakıp, hiç bilmediğin bir ülkede, tanımadığın insanlarla yeni bir hayata başlamak hiç kolay değildir. Böyle zor bir karan alabildiğin için çok cesursun. Yeni hayat, yeni umutlar, yeni heyecanlar ve yeni zorluklar Hepimiz o yollardan geçtik, ne kadar zor olduğunu hepimiz çok iyi biliyoruz, seni çok iyi anlıyoruz. Her ne nedenden gelmiş olursan ol, kim olursan ol, bu zorluklara karşı yalnız olmadığını bilmeni isterim. Ne zaman yalnız kalırsan, umudunu kaybedersen, Cumhuriyet Halk Partisi, her zaman, her saniye ve her yerde senin yanında Cumhuriyet Halk Partisinin kapısının sana her daim açık olduğunu bilmeni isterim. Almanya'ya ilk adımından itibaren yapman gereken 7 şeyi Gençlik Kolları sosyal medya hesaplarımızda bulabilirsin. Willkommen in Deutschland, Almanya'ya hoş geldin",
             "summary":"Almanya'ya hoş geldin! Willkommen in Deutschland!."
@@ -27,13 +30,33 @@
         {
             "img":"yuzyiletkinlik.webp",
             "date":"29.10.2023",
+            "vid":"",
             "title":"CHP Düsseldorf ve Çevresi Birliği 100. Yıl Kutlamaları",
             "text":"CHP Düsseldorf ve Çevresi Birliği olarak Cumhuriyetimiz'in 100. Yılında başta Ulu Önder Mustafa Kemal Atatürk olmak üzere bütün kahramanlarımızı saygı ile anıyoruz.",
             "summary":"CHP Düsseldorf 100. yıl kutlamaları."
         },
 
         {
+            "img":"",
+            "vid":"ayfersandik.mp4",
+            "date":"25.05.2023",
+            "title":"'Biz görevimizi tamamladık.'",
+            "text":"Biz görevimizi tamamladık. Şimdi sıra sende Türkiye 🇹🇷 #HerŞeyÇokGüzelOlacak.",
+            "summary":"Biz görevimizi tamamladık. Şimdi sıra sende Türkiye 🇹🇷 #HerŞeyÇokGüzelOlacak"
+        },  
+
+        {
+            "img":"",
+            "vid":"yasarSol.mp4",
+            "date":"01.05.2023",
+            "title":"CHP Düsseldorf ve Çevresi Birliği Başkanımız Yaşar Yorulmaz'dan Sol Parti Mitin Konuşması",
+            "text":"Sol Partinin daveti üzerine Duisburg Forumun önünde gerçekleştirilen mitinge partimizde davetliydi. CHP Düsseldorf ve çevresi Birliği başkanımız Yaşar Yorulmaz mitingde bir konuşma yaptı ve vatandaşlarımıza yurt dışı vaatlerimizi aktardı.",
+            "summary":"Sol Parti Miting"
+        },
+
+        {
             "img":"deprem.webp",
+            "vid":"",
             "date":"06.02.2023",
             "title":"Gün Birlik Günü",
             "text":"6 Şubat Depreminden etkilenen vatandaşlarımız için yaptığımız yardım çalışmamızda emeği geçen bütün herkese teşekkür ediyor, depremden etkilenen vatandaşlarımızın her zaman yanında olduğumuzu belirtmek istiyoruz.",
