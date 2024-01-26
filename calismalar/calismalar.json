@@ -5,7 +5,8 @@
             "date":"27.01.2024",
             "vid":"",
             "title":"DEMOKRASİYİ SAVUNUYORUZ!",
-            "text":"Ülkemizde olduğu gibi, dünyanın her yerinde demokrasi, özgürlük ve hukukun üstünlüğünü savunuyoruz. SPD'nin demonstrasyon çağrısına katılıyor ve 27 Ocak 2024 tarihinde DGB-Haus Düsseldorf'ta buluşuyoruz. 📌 27.01.2024 📌 11.00 📌 Düsseldorf HBF (Konrad-AdenauerPlatz/Innenstadt) Saat 11.00'de Düsseldorf HBF'da buluşup, DGB-Haus Düsseldorf'a geçeceğiz. Pankartlarınzı alın hukuk ve demokrasi için bize katılın!",
+            "texttitle":"demokrasiyisavunuyoruz",
+            "text":"Ülkemizde olduğu gibi, dünyanın her yerinde demokrasi, özgürlük ve hukukun üstünlüğünü savunuyoruz. SPD'nin demonstrasyon çağrısına katılıyor ve 27 Ocak 2024 tarihinde DGB-Haus Düsseldorf'ta buluşuyoruz. 📌 27.01.2024 📌 11.00 📌 Düsseldorf HBF (Konrad-AdenauerPlatz/Innenstadt) Saat 11.00'de Düsseldorf HBF'da buluşup, DGB-Haus Düsseldorf'a geçeceğiz. Hukuk ve demokrasi için bize katılın!",
             "summary":"Ülkemizde olduğu gibi, dünyanın her yerinde demokrasi, özgürlük ve hukukun üstünlüğünü savunuyoruz."
         },
 
@@ -14,6 +15,7 @@
             "date":"13.01.2024",
             "vid":"",
             "title":"CUMHURİYETİN TOHUMLARI ALMANYA'DA AÇIYOR",
+            "texttitle":"cumhuriyettohum",
             "text":"CUMHURİYETİN TOHUMLARI ALMANYA'DA AÇIYOR! Sen de bize katıl, cumhuriyete, geleceğe, umuda #sendebirtohumek (Yeni katılan her üye için bir fidan bağışlanacaktır.) Üye olmak için; www.chpdusseldorfcevresi.de/bizekatil",
             "summary":"Sen de bize katıl, cumhuriyete, geleceğe, umuda #sendebirtohumek"
         },
@@ -23,6 +25,7 @@
             "date":"01.01.2024",
             "vid":"",
             "title":"İşte Almanya'ya ilk adımından itibaren yapman gereken 8 şey!",
+            "texttitle":"yapmangerekensekizsey",
             "text":"Vatanından ayrılmak, bütün hayatını geride bırakıp, hiç bilmediğin bir ülkede, tanımadığın insanlarla yeni bir hayata başlamak hiç kolay değildir. Böyle zor bir karan alabildiğin için çok cesursun. Yeni hayat, yeni umutlar, yeni heyecanlar ve yeni zorluklar Hepimiz o yollardan geçtik, ne kadar zor olduğunu hepimiz çok iyi biliyoruz, seni çok iyi anlıyoruz. Her ne nedenden gelmiş olursan ol, kim olursan ol, bu zorluklara karşı yalnız olmadığını bilmeni isterim. Ne zaman yalnız kalırsan, umudunu kaybedersen, Cumhuriyet Halk Partisi, her zaman, her saniye ve her yerde senin yanında Cumhuriyet Halk Partisinin kapısının sana her daim açık olduğunu bilmeni isterim. Almanya'ya ilk adımından itibaren yapman gereken 8 şeyi Gençlik Kolları sosyal medya hesaplarımızda bulabilirsin. Willkommen in Deutschland, Almanya'ya hoş geldin",
             "summary":"Almanya'ya hoş geldin! Willkommen in Deutschland!."
         },
@@ -32,6 +35,7 @@
             "date":"29.10.2023",
             "vid":"",
             "title":"CHP Düsseldorf ve Çevresi Birliği 100. Yıl Kutlamaları",
+            "texttitle":"100yil",
             "text":"CHP Düsseldorf ve Çevresi Birliği olarak Cumhuriyetimiz'in 100. Yılında başta Ulu Önder Mustafa Kemal Atatürk olmak üzere bütün kahramanlarımızı saygı ile anıyoruz.",
             "summary":"CHP Düsseldorf 100. yıl kutlamaları."
         },
@@ -41,6 +45,7 @@
             "vid":"ayfersandik.mp4",
             "date":"25.05.2023",
             "title":"'Biz görevimizi tamamladık.'",
+            "texttitle":"gorevtamam",
             "text":"Biz görevimizi tamamladık. Şimdi sıra sende Türkiye 🇹🇷 #HerŞeyÇokGüzelOlacak.",
             "summary":"Biz görevimizi tamamladık. Şimdi sıra sende Türkiye 🇹🇷 #HerŞeyÇokGüzelOlacak"
         },  
@@ -50,6 +55,7 @@
             "vid":"yasarSol.mp4",
             "date":"01.05.2023",
             "title":"CHP Düsseldorf ve Çevresi Birliği Başkanımız Yaşar Yorulmaz'dan Sol Parti Miting Konuşması",
+            "texttitle":"solparti",
             "text":"Sol Partinin daveti üzerine Duisburg Forumun önünde gerçekleştirilen mitinge partimizde davetliydi. CHP Düsseldorf ve çevresi Birliği başkanımız Yaşar Yorulmaz mitingde bir konuşma yaptı ve vatandaşlarımıza yurt dışı vaatlerimizi aktardı.",
             "summary":"Sol Parti Miting"
         },
@@ -59,6 +65,7 @@
             "vid":"",
             "date":"06.02.2023",
             "title":"Gün Birlik Günü",
+            "texttitle":"deprem",
             "text":"6 Şubat Depreminden etkilenen vatandaşlarımız için yaptığımız yardım çalışmamızda emeği geçen bütün herkese teşekkür ediyor, depremden etkilenen vatandaşlarımızın her zaman yanında olduğumuzu belirtmek istiyoruz.",
             "summary":"6 Şubat Depreminden etkilenen vatandaşlarımız için Almanya'dan bir tır eşya gönderdik."
         }
