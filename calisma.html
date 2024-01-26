@@ -12,7 +12,7 @@
         
         --->
 
-   <link rel="shortcut icon" type="image/x-icon" href="assets/chpduslogo.webp" />
+
 
 
     <meta charset="UTF-8">
@@ -116,6 +116,10 @@ html, body {
         background-position: center;
     }
 
+    .calismaText{
+        word-break: break-all;
+    }
+
 </style>
 
 
@@ -162,7 +166,8 @@ html, body {
 
                     document.getElementById("calismaDate").innerHTML = calismalar["calismalar"][calismaId]["date"]
                     document.getElementById("calismaTitle").innerHTML = calismalar["calismalar"][calismaId]["title"]
-                    document.getElementById("calismaText").innerHTML = calismalar["calismalar"][calismaId]["text"]
+
+                    $(".calismaText").load("/calismalar/text/"+calismalar["calismalar"][calismaId]["texttitle"]+".html"); 
                 }
     </script>
     
