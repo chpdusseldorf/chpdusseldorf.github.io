@@ -13,7 +13,6 @@
         --->
 
 
-   <link rel="shortcut icon" type="image/x-icon" href="assets/chpduslogo.webp" />
 
 
     <meta charset="UTF-8">
@@ -131,7 +130,6 @@ html, body {
         <div class="mainFrame">
            <div class="calismaFrame">
                 <div class="calismaImg" id="calismaImg"></div>
-                <video class="calismaImg" id="calismaVid" src="" type="video/mp4" controls></video>
                 <p class="calismaDate" id="calismaDate" style="color: gray; font-size: 12px;"></p>
                 <h3 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold;"></h3>
                 <p class="calismaText" id="calismaText"></p>
@@ -146,30 +144,32 @@ html, body {
         href = window.location.search
         calismaId = parseInt(href.split("?")[1])
 
-        fetch('calismalar/calismalar.json')
-                .then((response) => response.json())
-                .then((json) => readJson(json));
-                
-                function readJson(calismalar){
-                    console.log(calismalar["calismalar"][calismaId])
+        fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts/'+calismaId+"?_embed")
+        .then(response => response.json())
+        .then(posts => {
+            // Process and display posts
+            console.log(posts);
 
-                    if (calismalar["calismalar"][calismaId]["img"] == "") {
-                        document.getElementById("calismaImg").style.display = "none"
-                    }else{
-                        document.getElementById("calismaImg").style.backgroundImage = "url(calismalar/imgs/"+calismalar["calismalar"][calismaId]["img"]+")"
-                    }
+            thumbnail = posts["_embedded"]['wp:featuredmedia']['0']["source_url"]
+            title = posts["title"]["rendered"]
+            date = posts["date"]
+            ozet = posts["excerpt"]["rendered"]
 
-                    if (calismalar["calismalar"][calismaId]["vid"] == "") {
-                        document.getElementById("calismaVid").style.display = "none"
-                    }else{
-                        document.getElementById("calismaVid").src = "calismalar/vids/"+calismalar["calismalar"][calismaId]["vid"]
-                    }
+            document.getElementById("calismaImg").style.backgroundImage = "url("+thumbnail+")"
+            document.getElementById("calismaDate").innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
+            document.getElementById("calismaTitle").innerHTML = title
 
-                    document.getElementById("calismaDate").innerHTML = calismalar["calismalar"][calismaId]["date"]
-                    document.getElementById("calismaTitle").innerHTML = calismalar["calismalar"][calismaId]["title"]
+            
+            content = posts["content"]["rendered"];
+            var contentObject = document.createElement('div');
+            contentObject.innerHTML = content;
 
-                    $(".calismaText").load("/calismalar/text/"+calismalar["calismalar"][calismaId]["texttitle"]+".html"); 
-                }
+            calismaTextDiv = document.getElementById("calismaText");
+            calismaTextDiv.appendChild(contentObject)
+        })
+        .catch(error => console.error(error));
+
+
     </script>
     
 </body>
