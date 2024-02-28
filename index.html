@@ -335,16 +335,16 @@ html, body {
         .then(response => response.json())
         .then(posts => {
             // Process and display posts
-            thumbnail = posts[1]["_embedded"]['wp:featuredmedia']['0']["source_url"]
+            thumbnail = posts[0]["_embedded"]['wp:featuredmedia']['0']["source_url"]
             document.getElementById("imgFrame").style.backgroundImage = "url("+thumbnail+")"
 
-            title = posts[1]["title"]["rendered"]
+            title = posts[0]["title"]["rendered"]
             document.getElementById("calismaTitle").innerHTML = title
 
-            date = posts[1]["date"]
+            date = posts[0]["date"]
             document.getElementById("calismaDate").innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
 
-            ozet = posts[1]["excerpt"]["rendered"]
+            ozet = posts[0]["excerpt"]["rendered"]
             document.getElementById("calismaText").innerHTML = ozet.split("<p>")[1]
 
         })
