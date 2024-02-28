@@ -4,6 +4,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/chpduslogo.webp" />
 
+
      <!--
         
         MADE BY LEMUSTACHE
@@ -15,12 +16,15 @@
         --->
 
 
-    <meta name="description" content="CHP Düsseldorf ve Çevresi Birliği Resmi Web Sitesi. 
-    Türkiye'den uzakta yaşayan vatandaşlar için sosyal, kültürel ve siyasi bağlantıları güçlendirmeyi amaçlayan birliğimize 
-    Siz de katılın, bizimle birlikte demokrasiye katkıda bulunun!">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CHP Düsseldorf ve Çevresi Resmi Web Sitesidir. 
+    Türkiye'den uzakta yaşayan vatandaşlar için sosyal, kültürel ve siyasi bağlantıları güçlendirmeyi amaçlayan birliğimize 
+    Siz de katılın, bizimle birlikte demokrasiye katkıda bulunun!">
+
     <title>CHP Düsseldorf ve Çevresi</title>
     
     <link rel="stylesheet" type="text/css" href="files/style.css" media=”screen” />
@@ -314,7 +318,7 @@ html, body {
                     <span></span>
                     <p style="margin-left: 10px; font-family: Gotham; text-shadow: rgb(255, 255, 255) 1px 0 10px;">--</p>
                     <span></span>
-                    <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="tel:+4915754274895">Tel.: +49 157 542 74895</a><p></p>
+                    <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="tel:+49 1575 4274895">Tel.: +49 1575 4274895</a><p></p>
                     <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham; margin-bottom: -10px;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="mailto:chpdusseldorfvecevresibirligi@gmail.com">Email: chpdusseldorfvecevresibirligi @gmail.com</a>
                 </div>
             </div>
@@ -324,25 +328,29 @@ html, body {
 
         <div class="footerFrame"></div>
 
-
-        <script>
-            fetch('calismalar/calismalar.json')
-                    .then((response) => response.json())
-                    .then((json) => readJson(json));
-
-                    
-                    function readJson(calismalar){
-
-                        document.getElementById("imgFrame").style.backgroundImage = "url(/calismalar/imgs/"+calismalar["calismalar"][0]["img"]+")"
-                        document.getElementById("calismaDate").innerHTML = calismalar["calismalar"][0]["date"]
-                        document.getElementById("calismaTitle").innerHTML = calismalar["calismalar"][0]["title"]
-                        document.getElementById("calismaText").innerHTML = calismalar["calismalar"][0]["summary"]
-  
-                    }
-
-        </script>
-
     </div>
+
+<script>
+        fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts?_embed')
+        .then(response => response.json())
+        .then(posts => {
+            // Process and display posts
+            thumbnail = posts[1]["_embedded"]['wp:featuredmedia']['0']["source_url"]
+            document.getElementById("imgFrame").style.backgroundImage = "url("+thumbnail+")"
+
+            title = posts[1]["title"]["rendered"]
+            document.getElementById("calismaTitle").innerHTML = title
+
+            date = posts[1]["date"]
+            document.getElementById("calismaDate").innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
+
+            ozet = posts[1]["excerpt"]["rendered"]
+            document.getElementById("calismaText").innerHTML = ozet.split("<p>")[1]
+
+        })
+        .catch(error => console.error(error));
+</script>
+
 
 </body>
 </html>
