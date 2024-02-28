@@ -12,8 +12,6 @@
         
         --->
 
-     <link rel="shortcut icon" type="image/x-icon" href="assets/chpduslogo.webp" />
-
 
 
 
@@ -206,59 +204,67 @@ html, body {
         </div>
 
         <div class="footerFrame"></div>
-        
 
         <script>
-            fetch('calismalar/calismalar.json')
-                .then((response) => response.json())
-                .then((json) => readJson(json));
+            fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts?_embed')
+            .then(response => response.json())
+            .then((posts) => createDivs(posts))
+            .catch(error => console.error(error));
+
+            function createDivs(posts){
+                console.log(posts.length)
+                // Process and display posts
+
+                for (i = 0; i<posts.length; i++){
                 
-                function readJson(calismalar){
-
-                    calismalarDivs = document.getElementsByClassName("calisma")
-
-                    calismalarFrame = document.getElementById("calismalarFrame")
-
-                    for (i = 0; i < calismalar["calismalar"].length; i++) {
-                        // CREATE CALİŞMA ELEMENTS
+                console.log(posts)
+    
+                thumbnail = posts[i]["_embedded"]['wp:featuredmedia']['0']["source_url"]
+                title = posts[i]["title"]["rendered"]    
+                date = posts[i]["date"]
+                ozet = posts[i]["excerpt"]["rendered"]
+                id = posts[i]["id"]
+    
+                
+                // content = posts[1]["content"]["rendered"];
+                // var contentObject = document.createElement('div');
+                // contentObject.innerHTML = content;
+    
+                // test = document.getElementById("test2");
+                // test.appendChild(contentObject)
 
                         calismaDiv = document.createElement("a")
-                        calismaDiv.href = "/calisma.html?"+[i]+"?"+calismalar["calismalar"][i]["title"]
+                        calismaDiv.href = "/calisma.html?"+id
                         calismaDiv.classList.add("calisma")
 
                         calismaImg = document.createElement("div")
                         calismaImg.classList.add("calismaImg")
 
-                        if (calismalar["calismalar"][i]["img"] == "") {
-                            calismaImg.style.backgroundImage =  "url(/calismalar/placeholder.webp)"
-                        }else{
-                            calismaImg.style.backgroundImage =  "url(/calismalar/imgs/"+calismalar["calismalar"][i]["img"]+")"
-                        }
+                        calismaImg.style.backgroundImage =  "url("+thumbnail+")"
 
                         calismaDiv.appendChild(calismaImg)
 
                         calismaDate = document.createElement("p")
                         calismaDate.classList.add("calismaDate")
-                        calismaDate.innerHTML = calismalar["calismalar"][i]["date"]
+                        calismaDate.innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
                         calismaDiv.appendChild(calismaDate)
 
                         calismaTitle = document.createElement("h3")
                         calismaTitle.classList.add("calismaTitle")
-                        calismaTitle.innerHTML = calismalar["calismalar"][i]["title"]
+                        calismaTitle.innerHTML = title
                         calismaDiv.appendChild(calismaTitle)
-
+                        
                         calismaText = document.createElement("p")
                         calismaText.classList.add("calismaText")
-                        calismaText.innerHTML = calismalar["calismalar"][i]["text"]
+                        calismaText.innerHTML = ozet.split("<p>")[1]
                         calismaDiv.appendChild(calismaText)
                         
                         calismalarFrame.appendChild(calismaDiv)
-
                     }
 
-                }
+            };
 
-        </script>
+    </script>
     </div>
 
 </body>
