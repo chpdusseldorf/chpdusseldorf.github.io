@@ -81,11 +81,12 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 60vh 60vh 45vh 35vh 70vh 10vh;
+        grid-template-rows: 20vh 60vh 60vh 30vh 45vh 35vh 70vh 10vh;
         grid-template-areas: 
         "header"
         "main"
         "canli"
+        "afis1"
         "gundem"
         "bizekatil"
         "iletisim"
@@ -232,6 +233,68 @@ html, body {
         background-color: #161616;
     }
 
+    .afis1{
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+
+        color: white;
+        text-align: center;
+
+        text-decoration: none;
+
+        width: 100%; 
+        height: 100%; 
+        
+        background-image: url(assets/noise.webp);
+    }
+
+    .afisTextFrame{
+        display: flex;
+        width: 100%;
+    }
+
+    .afisText{
+        width: 70%;
+        display: flex; 
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        text-align: center;
+    }
+
+    .afisText h1 & h3{
+        margin-left: 50px;
+    }
+
+    .afisIMG{
+        width: 15%; height: 100%; 
+        
+        background-image: url(assets/kirmizi-blank.webp);
+        background-size: 100%;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    @media screen and (max-width:1400px) {
+        .afisIMG{
+            display: none;
+        }
+        .afisText{
+            font-size: 20px;
+            width: 100%;
+        }
+
+        .afisText h1 & h3{
+            margin-left: 0px;
+        }
+    }
+    
+
 </style>
 
 
@@ -251,6 +314,16 @@ html, body {
             <iframe width="100%" height="90%" src="https://www.youtube.com/embed/HaHZ0nAjy-A?si=7e4ckTVzKi8x7MAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
             <div class="line2" style="margin-top: 30px;"></div>
         </div>
+
+        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/calisma?52">
+            <div class="afisTextFrame">
+                <div class="afisText">
+                    <h1>ALMANYA'YA HOŞ GELDİN!</h1>
+                    <h3 style="margin-top: -20px;">İşte ilk adımından itibaren yapman gereken 8 şey!</h3>
+                </div>
+                <div class="afisIMG"></div>
+            </div>
+        </a>
 
         <div class="gundemFrame">
             <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0ijGRc9EMsbCK7OLjK3xLP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
