@@ -122,6 +122,13 @@ html, body {
         background-position: center;
     }
 
+    .calismaText img{
+        width:auto;
+        max-width: 100%;
+        max-height: 400px;
+        background-color: aliceblue;
+    }
+
     .calismaText{
         word-break: break-all;
     }
@@ -138,7 +145,7 @@ html, body {
                 <div class="calismaImg" id="calismaImg"></div>
                 <p class="calismaDate" id="calismaDate" style="color: gray; font-size: 12px;"></p>
                 <h3 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold;"></h3>
-                <p class="calismaText" id="calismaText"></p>
+                <div class="calismaText" id="calismaText"></div>
            </div>
         </div>
 
@@ -167,11 +174,9 @@ html, body {
 
             
             content = posts["content"]["rendered"];
-            var contentObject = document.createElement('div');
-            contentObject.innerHTML = content;
 
             calismaTextDiv = document.getElementById("calismaText");
-            calismaTextDiv.appendChild(contentObject)
+            calismaTextDiv.innerHTML = content;
         })
         .catch(error => console.error(error));
 
