@@ -81,7 +81,7 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 60vh 60vh 30vh 45vh 35vh 70vh 10vh;
+        grid-template-rows: 20vh 60vh 60vh 30vh 45vh 35vh 30vh 70vh 10vh;
         grid-template-areas: 
         "header"
         "main"
@@ -89,6 +89,7 @@ html, body {
         "afis1"
         "gundem"
         "bizekatil"
+        "afis2"
         "iletisim"
         "footer"
         ;
@@ -293,6 +294,43 @@ html, body {
             margin-left: 0px;
         }
     }
+
+    .afis2{
+        margin-top: 70px;
+
+        background-image: none;
+        background-color: rgb(168, 3, 3);
+    }
+
+    .afis2 .afisIMG{
+        background-image: url(assets/isimizgucumuz.webp);
+
+        display: block;
+
+        width: 15%;
+    }
+
+    @media screen and (max-width:900px) {
+        .afis2 .afisIMG{
+            display: block;
+            width: 30%;
+        }
+
+        .afis2 .afisText{
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .afis2 .afisIMG{
+            display: block;
+            min-width: 40%;
+        }
+
+        .afis2 .afisText{
+            font-size: 14px;
+        }
+    }
     
 
 </style>
@@ -354,6 +392,15 @@ html, body {
                 <p style="margin-top: -10px;" class="bizekatiltext">Türkiye'yi Birlikte İnşaa Edelim!</p>
                 
         </div>
+
+        <a class="afis1 afis2" href="https://isimizgucumuz.net/" target="_blank">
+            <div class="afisTextFrame">
+                <div class="afisText">
+                    <h1>2024 YEREL SEÇİM BEYANNAMESİ</h1>
+                </div>
+                <div class="afisIMG"></div>
+            </div>
+        </a>
 
         <div class="iletisimFrame" id="iletisim">
             <div class="sosyalFrame">
