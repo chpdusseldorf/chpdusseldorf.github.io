@@ -81,12 +81,15 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 60vh 60vh 30vh 45vh 35vh 30vh 70vh 10vh;
+        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 45vh 100vh 30vh 70vh 10vh;
         grid-template-areas: 
         "header"
+        "video"
         "main"
+        "haberler"
         "canli"
         "afis1"
+        "afiskatil"
         "gundem"
         "bizekatil"
         "afis2"
@@ -99,15 +102,75 @@ html, body {
         gap: 40px;
     }
 
-    .mainImgFrame{
-        width: 50%;
-        height: 100%;
-
-        margin-top: 10px;
-
+    .videoFrame{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+        
+        background-color: var(--kirmizi);
     }
+
+    .VidBttn{
+        margin-top: -50px;
+        display:flex;color:white;
+        background-color:var(--kirmizi); 
+        width: 275px; 
+        height: 100px;  
+
+        text-align: center; 
+        align-items: center; 
+        justify-content: center; 
+        text-decoration: none; 
+        border-radius: 10px;
+        font-family: GothamBold;
+
+        margin-top: -150px;
+    }
+
+    .mainImgFrame{
+        width: 70%;
+        height: 100%;
+
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .gndmImg{
+        height:80%;width: 80%;
+    }
+
+    .gundemDetails{
+        height: 80%;
+
+        background-color: #83838328;
+    }
+
+    .readMoreBtn{
+        display:flex;
+        color:white;
+        background-color:var(--kirmizi);
+        width: 150px; 
+        height: 50px;  
+        text-align: center; 
+        align-items: center; 
+        justify-content: center; 
+        text-decoration: none; 
+        border-radius: 20px;
+        font-family: GothamBold;
+        margin-left: 10px;margin-top: 50px;
+    }
+
+    .readMoreBtn:hover{
+        opacity: .5;
+    }
+
+
 
     .imgFrame{
         background-image: url(calismalar/placeholder.webp);
@@ -117,7 +180,107 @@ html, body {
 
         width: 100%;
         height: 100%;
+    }
 
+    .haberFrame{
+        display: flex;
+
+        width: 65%;
+        min-height: 100%;
+        flex-direction: column;
+    }
+
+    .haberHolder{
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+
+        justify-content: space-around;
+
+        gap: 20px;
+    }
+
+    .haberFrame a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .haberFrame a:visited{
+        color: black;
+    }
+
+    .haberFrame a:hover{
+        opacity: .5;
+    }
+
+
+    .calismaImg{
+        width: 100%;
+        height: 30%;
+        min-height: 300px;
+        background-color: aliceblue;
+
+        background-image: url(assets/chpbayrak-blur.webp);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .calismaDate{
+        color: gray;
+        font-size: 12px;
+
+        text-align: left;
+    }
+
+    .calismaTitle{
+        text-transform: capitalize;
+        margin-top: -10px;
+
+        font-family: GothamBold;
+        text-align: left;
+    }
+
+    .calismaText{
+        margin-top: -10px;
+
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+
+        text-align: left;
+
+        width: 90%;
+    }
+
+    @media screen and (max-width:800px) {
+        .mainBody{
+            grid-template-rows: 20vh 50vh 30vh 80vh auto 60vh 25vh 45vh 35vh 30vh 70vh 10vh;
+        }
+
+        .VidBttn{
+            width: 200px; 
+            height: 75px;  
+
+            margin-top: 10px;
+        }
+
+        .videoFrame{
+            background-color: white;
+        }
+
+        .readMoreBtn{
+            margin-top: 0px;
+        }
+
+        .haberFrame{
+            width: 100%;
+        }
+
+        .haberHolder{
+            grid-template-columns: 100%;
+        }
     }
 
     .canliFrame{
@@ -139,8 +302,6 @@ html, body {
     .iletisimFrame{
         width: 100%;
         height: 120%;
-
-
 
         background-image: url(assets/bg-dus\ copy3.webp);
         background-repeat: no-repeat;
@@ -178,7 +339,7 @@ html, body {
     }
 
     .bizeKatilFrame{
-        width: 50%;
+        width: 100%;
         height: 100%;
 
         display: flex;
@@ -206,6 +367,12 @@ html, body {
     @media screen and (max-width:1200px) {
         .mainImgFrame{
             width: 95%;
+            flex-direction: column;
+        }
+
+        .gndmImg{
+            width: 100%;
+            order: -1;
         }
 
     }
@@ -338,19 +505,13 @@ html, body {
 
 <body>
     <div class="mainBody">
-        <div class="headerFrame"></div>
+        <div class="headerFrame" style="z-index:100000"></div>
 
-        <div class="mainImgFrame">
-            <a href="https://www.chpdusseldorfcevresi.de/calismalar" style="height: 75%;width: 100%;"><div class="imgFrame" id="imgFrame"></div></a>
-            <p class="calismaDate" id="calismaDate" style="margin-left: 10px;">02.04.2023</p>
-            <h2 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold; text-transform: capitalize; margin-left: 10px;margin-top: -10px;">Hoş Geldin..!</h2>
-            <p class="calismaText" id="calismaText" style="font-family: Gotham; margin-top: -15px; color: rgb(59, 59, 59); margin-left: 10px;">Sen de bize katıl ve yeni yüzyılda Türkiye'yi birlikte inşaa edelim!</p>
-        </div>
-
-        <div class="canliFrame">
-            <h2 style="font-family: GothamBold; align-self: flex-start;">Canlı Yayın</h2>
-            <iframe width="100%" height="90%" src="https://www.youtube.com/embed/HaHZ0nAjy-A?si=7e4ckTVzKi8x7MAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
-            <div class="line2" style="margin-top: 30px;"></div>
+        <div class="videoFrame">
+            <video src="assets/sendebirtohumek.mp4" style="max-width: 100%; height: 100%; margin-top: -15px;" muted autoplay loop></video>
+            <div class="katilButtnFrame">
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="VidBttn" style="z-index: 2; margin-top: -50px; background-color: #002B6B;">BİZE KATIL!</a>
+            </div>
         </div>
 
         <a class="afis1" href="https://www.chpdusseldorfcevresi.de/calisma?52">
@@ -362,6 +523,111 @@ html, body {
                 <div class="afisIMG"></div>
             </div>
         </a>
+
+
+        <div class="mainImgFrame">
+            <div class="gundemDetails">
+                <p class="calismaDate" id="calismaDate" style="margin-left: 10px;margin-top: 30px;">02.04.2023</p>
+                <h2 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold; text-transform: capitalize; margin-left: 10px;margin-top: -10px;">Hoş Geldin..!</h2>
+                <p class="calismaText" id="calismaText" style="font-family: Gotham; margin-top: -10px; color: rgb(59, 59, 59); margin-left: 10px;">Sen de bize katıl ve yeni yüzyılda Türkiye'yi birlikte inşaa edelim!</p>    
+                <div class="gundemBtns">
+                    <a href="https://www.chpdusseldorfcevresi.de/calismalar" target="_blank" class="readMoreBtn">Daha Fazla Oku</a>
+                    <div class="gndmChangeBtnHolder">
+
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" class="gndmImg"><div class="imgFrame" id="imgFrame"></div></a>
+        </div>
+
+        <div class="haberFrame">
+            <h2 style="font-family: GothamBold;align-self: flex-start">Gündem</h2>
+            
+            <div class="haberHolder" id="haberHolder"></div>
+
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" style="color: black; text-decoration: none;font-family: GothamMed">Daha Fazla Oku -></a>
+
+
+            <script>
+                fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts?_embed')
+                .then(response => response.json())
+                .then((posts) => createDivs(posts))
+                .catch(error => console.error(error));
+    
+                function createDivs(posts){
+                    console.log(posts.length)
+                    calismalarFrame = document.getElementById("haberHolder")
+                    // Process and display posts
+
+                    var gundemAmount = 6;
+
+
+                    console.log(window.screen.width)
+
+                    if (window.screen.width <= 1200){
+                        var gundemAmount = 2;
+                    }
+    
+                    for (i = 0; i<gundemAmount; i++){
+                    
+                    console.log(posts)
+        
+                    thumbnail = posts[i]["_embedded"]['wp:featuredmedia']['0']["source_url"]
+                    title = posts[i]["title"]["rendered"]    
+                    date = posts[i]["date"]
+                    ozet = posts[i]["excerpt"]["rendered"]
+                    id = posts[i]["id"]
+        
+                    
+                    // content = posts[1]["content"]["rendered"];
+                    // var contentObject = document.createElement('div');
+                    // contentObject.innerHTML = content;
+        
+                    // test = document.getElementById("test2");
+                    // test.appendChild(contentObject)
+    
+                            calismaDiv = document.createElement("a")
+                            calismaDiv.href = "/calisma.html?"+id
+                            calismaDiv.classList.add("calisma")
+    
+                            calismaImg = document.createElement("div")
+                            calismaImg.classList.add("calismaImg")
+    
+                            calismaImg.style.backgroundImage =  "url("+thumbnail+")"
+    
+                            calismaDiv.appendChild(calismaImg)
+    
+                            calismaDate = document.createElement("p")
+                            calismaDate.classList.add("calismaDate")
+                            calismaDate.innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
+                            calismaDiv.appendChild(calismaDate)
+    
+                            calismaTitle = document.createElement("h3")
+                            calismaTitle.classList.add("calismaTitle")
+                            calismaTitle.innerHTML = title
+                            calismaDiv.appendChild(calismaTitle)
+                            
+                            calismaText = document.createElement("p")
+                            calismaText.classList.add("calismaText")
+                            calismaText.innerHTML = ozet.split("<p>")[1]
+                            calismaDiv.appendChild(calismaText)
+                            
+                            calismalarFrame.appendChild(calismaDiv)
+                        }
+    
+                };
+    
+        </script>
+
+        </div>
+
+        <div class="canliFrame">
+            <h2 style="font-family: GothamBold; align-self: flex-start;">Canlı Yayın</h2>
+            <iframe width="100%" height="90%" src="https://www.youtube.com/embed/HaHZ0nAjy-A?si=7e4ckTVzKi8x7MAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+            <div class="line2" style="margin-top: 30px;"></div>
+        </div>
+
+        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="background-image: url(assets/test.png);background-size: cover; background-position: center;"></a>
 
         <div class="gundemFrame">
             <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0ijGRc9EMsbCK7OLjK3xLP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
@@ -377,7 +643,8 @@ html, body {
             <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
         </div>
 
-        <div class="bizeKatilFrame">
+
+        <div class="bizeKatilFrame" style="background-color: #00a300;">
 
                 <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                     <h3 style="font-family: GothamBold;">Değişim </h3>
