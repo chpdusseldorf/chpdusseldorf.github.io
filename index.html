@@ -81,7 +81,7 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 45vh 100vh 30vh 70vh 10vh;
+        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 45vh 60vh 30vh 70vh 10vh;
         grid-template-areas: 
         "header"
         "video"
@@ -260,7 +260,7 @@ html, body {
 
     @media screen and (max-width:800px) {
         .mainBody{
-            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 45vh 35vh 30vh 70vh 10vh;
+            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 45vh 60vh 30vh 70vh 10vh;
             grid-template-areas: 
             "header"
             "main"
@@ -361,18 +361,41 @@ html, body {
 
         display: flex;
         align-items: center;
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
 
         z-index: 3;
+
+        text-align: center;
+
+
     }
 
-    .bizeKatilFrame{
-        border-bottom: black solid 1px;
-        text-align: center;
+    .bizeKatilHolder{
+        width: 100%; height: 75%; background-color: var(--kirmizi); display: flex; align-items: center; justify-content:center;
+    }
+
+    .bizeKatilIMG{width: 30%; height: 125%; background-image: url(assets/bizekatilimg.jpg);}
+
+    .bizeKatilDetailsFrame{
+        width: 45%; height: 100%; display: flex;align-items: center;flex-direction: column;justify-content: center; color: white;
+    }
+
+    .bizeKatilDetailsTitle{
+        display: flex; flex-direction: row; align-items: center; gap: 5px;justify-content: center;
     }
 
     .bizeKtlBttn{
-        display:flex;color:white;background-color:var(--kirmizi); width: 120px; height: 100px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;font-family: GothamBold;
+        display:flex;color:white;
+        width: 150px; height: 75px;  
+        text-align: center; 
+        align-items: center; 
+        justify-content: center; text-decoration: none;
+        font-family: GothamBold;
+        background-color: black;
+        border-radius: 10px;
+
+        margin-top: 20px;
     }
 
     @media screen and (max-width:800px) {
@@ -399,7 +422,6 @@ html, body {
             width: 100%;
             order: -1;
         }
-
     }
 
     @media screen and (max-width:515px) {
@@ -409,12 +431,15 @@ html, body {
 
         .bizeKatilFrame{
             border: none;
-            border-top: black solid 1px;
         }
 
         .bizekatiltext{
             border-bottom: black solid 1px;
             padding-bottom: 20px;
+        }
+
+        .bizeKatilIMG{
+            display: none;
         }
     }
 
@@ -669,7 +694,24 @@ html, body {
         </div>
 
 
-        <div class="bizeKatilFrame" style="background-color: #00a300;">
+        <div class="bizeKatilFrame">
+                <div class="bizeKatilHolder">
+                    <div class="bizeKatilIMG"></div>
+                    <div class="bizeKatilDetailsFrame">
+                        <div class="bizeKatilDetailsTitle">
+                            <h1 style="font-family: GothamBold;">Değişim Bizimle Mümkün!</h1>
+                        </div>
+                        <div>
+                            <p>Geçmişin Mirasıyla Yeni Yüzyılda Umut, Huzur, Adalet Dolu</p>
+                            <p style="margin-top: -10px;" class="bizekatiltext">Türkiye'yi Birlikte İnşaa Edelim!</p>
+                        </div>
+                        <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
+                    </div>
+                </div>
+        </div>
+
+        <!--
+                    <div class="bizeKatilFrame">
 
                 <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                     <h3 style="font-family: GothamBold;">Değişim </h3>
@@ -680,10 +722,10 @@ html, body {
 
                 <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
                 
-                <p>Geçmişin Mirasıyla Yeni Yüzyıl'da Umut, Huzur, Adalet Dolu</p>
-                <p style="margin-top: -10px;" class="bizekatiltext">Türkiye'yi Birlikte İnşaa Edelim!</p>
+
                 
         </div>
+        -->
 
         <a class="afis1 afis2" href="https://isimizgucumuz.net/" target="_blank">
             <div class="afisTextFrame">
