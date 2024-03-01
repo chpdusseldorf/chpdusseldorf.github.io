@@ -85,10 +85,10 @@ html, body {
         grid-template-areas: 
         "header"
         "video"
+        "afis1"
         "main"
         "haberler"
         "canli"
-        "afis1"
         "afiskatil"
         "gundem"
         "bizekatil"
@@ -139,6 +139,8 @@ html, body {
 
         display: flex;
         flex-direction: row;
+
+        grid-area: main;
     }
 
     .gndmImg{
@@ -188,6 +190,8 @@ html, body {
         width: 65%;
         min-height: 100%;
         flex-direction: column;
+
+        grid-area: haberler;
     }
 
     .haberHolder{
@@ -256,8 +260,23 @@ html, body {
 
     @media screen and (max-width:800px) {
         .mainBody{
-            grid-template-rows: 20vh 50vh 30vh 80vh auto 60vh 25vh 45vh 35vh 30vh 70vh 10vh;
+            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 45vh 35vh 30vh 70vh 10vh;
+            grid-template-areas: 
+            "header"
+            "main"
+            "haberler"
+            "afis1"
+            "canli"
+            "afiskatil"
+            "gundem"
+            "bizekatil"
+            "afis2"
+            "iletisim"
+            "footer"
+            ;
+
         }
+
 
         .VidBttn{
             width: 200px; 
@@ -265,7 +284,7 @@ html, body {
         }
 
         .videoFrame{
-            background-color: white;
+            display: none;
         }
         
         .readMoreBtn{
