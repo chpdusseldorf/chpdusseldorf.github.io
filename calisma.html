@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 
+    <link rel="shortcut icon" type="image/x-icon" href="assets/chpduslogo.webp" />
+
+
      <!--
         
         MADE BY LEMUSTACHE
@@ -17,11 +20,21 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CHP Düsseldorf ve Çevresi Resmi Web Sitesidir. 
+    Türkiye'den uzakta yaşayan vatandaşlar için sosyal, kültürel ve siyasi bağlantıları güçlendirmeyi amaçlayan birliğimize 
+    Siz de katılın, bizimle birlikte demokrasiye katkıda bulunun!">
+
     <title>CHP Düsseldorf ve Çevresi</title>
     
     <link rel="stylesheet" type="text/css" href="files/style.css" media=”screen” />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta property="og:title" content="CHP Düsseldorf ve Çevresi Birliği" />
+    <meta property="og:image" content="/assets/chpduslogo.webp" />
+    <meta property="og:description " content="CHP Düsseldorf ve Çevresi Birliği Resmi Websitesi!" />
+    <meta property="og:type" content="website"/>
 
 
     <!------------------------HEADER & FOOTER LOAD--------------------------------------------------------------------------------------------->
@@ -63,17 +76,7 @@ html, body {
 
   *{
       font-family: Gotham;
-  }
-
-  .calismaReadFrame{
-    width: 100%;
-    height: 100%;
-
-    background-color: black;
-    position: absolute;
-
-    align-self: center;
-    justify-self: center;
+      scroll-behavior: smooth;
   }
 
   
@@ -81,129 +84,861 @@ html, body {
         width: 100%;
         height: 100%;
 
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 60vh 60vh 30vh 70vh 10vh;
+        grid-template-areas: 
+        "header"
+        "video"
+        "afis1"
+        "main"
+        "haberler"
+        "canli"
+        "afiskatil"
+        "projeler"
+        "bizekatil"
+        "afis2"
+        "iletisim"
+        "footer"
+        ;
 
-        align-items: center;
+        justify-items: center;
 
         gap: 40px;
     }
 
-    .mainFrame{
-        width: 90%;
-        height: 100%;
-        
+    .videoFrame{
         display: flex;
         flex-direction: column;
-        
         align-items: center;
         justify-content: center;
+
+        width: 100%;
+        height: 100%;
+        
+        background-color: var(--kirmizi);
     }
 
-    .calismaFrame{
-        width: 90%;
-        min-height: 750px;
+    .VidBttn{
+        margin-top: -50px;
+        display:flex;color:white;
+        background-color:var(--mavi); 
+        width: 275px; 
+        height: 100px;  
+
+        text-align: center; 
+        align-items: center; 
+        justify-content: center; 
+        text-decoration: none; 
+        border-radius: 10px;
+        font-family: GothamBold;
+
+        margin-top: -150px;
     }
 
-    .calismaTitle{
-        text-align: center;
+    .VidBttn:hover{
+        background-color:black;
     }
 
-    .calismaDate{
-        text-align: center;
+    .mainImgFrame{
+        width: 70%;
+        height: 100%;
+
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: row;
+
+        grid-area: main;
     }
+
+    .gndmImg{
+        height:80%;width: 80%;
+    }
+
+    .gundemDetails{
+        height: 80%;
+
+        background-color: #83838328;
+    }
+
+    .readMoreBtn{
+        display:flex;
+        color:white;
+        background-color:var(--kirmizi);
+        width: 150px; 
+        height: 50px;  
+        text-align: center; 
+        align-items: center; 
+        justify-content: center; 
+        text-decoration: none; 
+        border-radius: 20px;
+        font-family: GothamBold;
+        margin-left: 10px;margin-top: 50px;
+    }
+
+    .readMoreBtn:hover{
+        opacity: .5;
+    }
+
+
+
+    .imgFrame{
+        background-image: url(calismalar/placeholder.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .haberFrame{
+        display: flex;
+
+        width: 65%;
+        min-height: 100%;
+        flex-direction: column;
+
+        grid-area: haberler;
+    }
+
+    .haberHolder{
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+
+        justify-content: space-around;
+
+        gap: 20px;
+    }
+
+    .haberFrame a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .haberFrame a:visited{
+        color: black;
+    }
+
+    .haberFrame a:hover{
+        opacity: .5;
+    }
+
 
     .calismaImg{
         width: 100%;
-        height: 400px;
+        height: 30%;
+        min-height: 300px;
         background-color: aliceblue;
 
+        background-image: url(assets/chpbayrak-blur.webp);
         background-size: cover;
         background-position: center;
     }
 
-    .calismaText img{
-        width:auto;
-        max-width: 100%;
-        max-height: 400px;
-        background-color: aliceblue;
+    .calismaDate{
+        color: gray;
+        font-size: 12px;
+
+        text-align: left;
     }
 
-    .calismaText figure{
-        float: right;
-        margin-right: 20px;
-        width: 100%;
+    .calismaTitle{
+        text-transform: capitalize;
+        margin-top: -10px;
+
+        font-family: GothamBold;
+        text-align: left;
     }
 
     .calismaText{
-        word-break: normal;
+        margin-top: -10px;
+
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+
+        text-align: left;
+
+        width: 90%;
     }
+
+    @media screen and (max-width:800px) {
+        .mainBody{
+            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh auto 75vh 30vh 70vh 10vh;
+            grid-template-areas: 
+            "header"
+            "main"
+            "haberler"
+            "afis1"
+            "canli"
+            "afiskatil"
+            "projeler"
+            "bizekatil"
+            "afis2"
+            "iletisim"
+            "footer"
+            ;
+
+        }
+
+
+        .VidBttn{
+            width: 200px; 
+            height: 75px;  
+        }
+
+        .videoFrame{
+            display: none;
+        }
+        
+        .readMoreBtn{
+            margin-top: 0px;
+        }
+
+        .haberFrame{
+            width: 90%;
+        }
+
+        .haberHolder{
+            grid-template-columns: 100%;
+        }
+    }
+
+    .canliFrame{
+        width: 65%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projelerFrame{
+        width: 100%;
+        height: 130%;
+
+        background-color: #3580f02f;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        margin-top: -40px;
+    }
+
+    .projelerHolder{
+        width: 90%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .proje{
+        width: 90%;
+        height: 90%;
+
+        display: flex;
+        flex-direction: column;
+
+        color: white;
+
+        box-shadow: 0px 0px 35px 0px rgba(46,0,0,0.28);    
+    }
+
+    .proje:hover{
+        box-shadow: 0px 0px 35px 0px rgba(46, 0, 0, 0.575);   
+    }
+
+    .proje h2{
+        font-family: GothamBold;
+
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+
+    .proje p{
+        width: 90%;
+
+        align-self: center;
+    }
+
+    .proje a{
+        color: white; margin-left: 20px; text-decoration: none; margin-top: 50px; font-family: GothamMed;
+    }
+
+    .proje a:hover{opacity: .5;}
+
+    @media screen and (max-width:1000px) {
+        .projelerFrame{
+            width: 100%;
+            min-height: 100vh;
+            height: fit-content;
+            margin-top: 0px;
+
+            background:none;
+        }
+        .projelerHolder{
+            display: grid;
+            grid-template-columns: 100%;
+
+            gap: 20px;
+            
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+
+            height: fit-content;
+        }
+
+        .proje{
+            width: 100%;
+            height: fit-content;
+            min-height: 400px;
+        }
+    }
+
+    .iletisimFrame{
+        width: 100%;
+        height: 120%;
+
+        background-image: url(assets/bg-dus\ copy3.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 20px;
+    }
+
+    .iletisimFrame .iletisim2{
+        display: flex;
+
+        margin-top: 10px;
+
+    }
+
+    .sosyalFrame{
+        width: 50%;
+        height: 30%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        gap: 10px;
+        }
+
+    .sosyalFrame a:hover{
+        opacity: .7;
+    }
+
+    .bizeKatilFrame{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        z-index: 3;
+
+        text-align: center;
+
+
+    }
+
+    .bizeKatilHolder{
+        width: 100%; height: 75%; background-color: var(--kirmizi); display: flex; align-items: center; justify-content:center;
+    }
+
+    .bizeKatilIMG{width: 30%; height: 125%; background-image: url(assets/bizekatilimg.jpeg);background-position: center;}
+
+    .bizeKatilDetailsFrame{
+        width: 45%; height: 100%; display: flex;align-items: center;flex-direction: column;justify-content: center; color: white;
+    }
+
+    .bizeKatilDetailsTitle{
+        display: flex; flex-direction: row; align-items: center; gap: 5px;justify-content: center;
+    }
+
+    .bizeKtlBttn{
+        display:flex;color:white;
+        width: 150px; height: 75px;  
+        text-align: center; 
+        align-items: center; 
+        justify-content: center; text-decoration: none;
+        font-family: GothamBold;
+        background-color: black;
+        border-radius: 10px;
+
+        margin-top: 20px;
+    }
+
+    .bizeKtlBttn:hover{
+        opacity: .5;
+    }
+
+    @media screen and (max-width:800px) {
+        .iletisimMap{
+            display: none;
+        }
+
+        .projelerFrame{
+            width: 90%;
+        }
+
+        .canliFrame{
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width:1200px) {
+        .mainImgFrame{
+            width: 95%;
+            flex-direction: column;
+        }
+
+        .gndmImg{
+            width: 100%;
+            order: -1;
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        .bizeKtlBttn{
+            min-height: 75px;
+        }
+
+        .bizeKatilFrame{
+            border: none;
+        }
+
+        .bizeKatilHolder{
+            flex-direction: column;
+        }
+
+        .bizeKatilIMG{
+            width: 75%;
+            height: 60%;
+
+            margin-top: -20vh;
+        }
+
+        .bizeKatilDetailsFrame{
+            height: 30%;
+            width: 100%;
+        }
+    }
+
+    .line2{
+        width: 50px;
+        height: 2px;
+        margin-right: 10px;
+        opacity: 0.4;
+        background-color: #161616;
+    }
+
+    .afis1{
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+
+        color: white;
+        text-align: center;
+
+        text-decoration: none;
+
+        width: 100%; 
+        height: 100%; 
+        
+        background-image: url(assets/noise.webp);
+    }
+
+    .afisTextFrame{
+        display: flex;
+        width: 100%;
+    }
+
+    .afisText{
+        width: 70%;
+        display: flex; 
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        text-align: center;
+    }
+
+    .afisText h1 & h3{
+        margin-left: 50px;
+    }
+
+    .afisIMG{
+        width: 15%; height: 100%; 
+        
+        background-image: url(assets/kirmizi-blank.webp);
+        background-size: 100%;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    @media screen and (max-width:1400px) {
+        .afisIMG{
+            display: none;
+        }
+        .afisText{
+            font-size: 20px;
+            width: 100%;
+        }
+
+        .afisText h1 & h3{
+            margin-left: 0px;
+        }
+    }
+
+    .afis2{
+        margin-top: 70px;
+
+        background-image: none;
+        background-color: rgb(168, 3, 3);
+    }
+
+    .afis2 .afisIMG{
+        background-image: url(assets/isimizgucumuz.webp);
+
+        display: block;
+
+        width: 15%;
+    }
+
+    @media screen and (max-width:900px) {
+        .afis2 .afisIMG{
+            display: block;
+            width: 30%;
+        }
+
+        .afis2 .afisText{
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .afis2 .afisIMG{
+            display: block;
+            min-width: 40%;
+        }
+
+        .afis2 .afisText{
+            font-size: 14px;
+        }
+    }
+    
 
 </style>
 
 
 <body>
     <div class="mainBody">
-        <div class="headerFrame" style="height: 20vh; width: 100%;"></div>
+        <div class="headerFrame" style="z-index:100000"></div>
 
-        <div class="mainFrame">
-           <div class="calismaFrame">
-                <div class="calismaImg" id="calismaImg"></div>
-                <p class="calismaDate" id="calismaDate" style="color: gray; font-size: 12px;"></p>
-                <h3 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold;"></h3>
-                <div class="calismaText" id="calismaText"></div>
-           </div>
+        <div class="videoFrame">
+            <video src="assets/sendebirtohumek.mp4" style="max-width: 100%; height: 100%; margin-top: -15px;" muted autoplay loop></video>
+            <div class="katilButtnFrame">
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="VidBttn" style="z-index: 2; margin-top: -50px;">BİZE KATIL!</a>
+            </div>
         </div>
 
-        <div class="footerFrame" style="height: 10vh; width: 100%;"></div>
+        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/calisma?52">
+            <div class="afisTextFrame">
+                <div class="afisText">
+                    <h1>ALMANYA'YA HOŞ GELDİN!</h1>
+                    <h3 style="margin-top: -20px;">İşte ilk adımından itibaren yapman gereken 8 şey!</h3>
+                </div>
+                <div class="afisIMG"></div>
+            </div>
+        </a>
+
+
+        <div class="mainImgFrame">
+            <div class="gundemDetails">
+                <p class="calismaDate" id="calismaDate" style="margin-left: 10px;margin-top: 30px;">02.04.2023</p>
+                <h2 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold; text-transform: capitalize; margin-left: 10px;margin-top: -10px;">Hoş Geldin..!</h2>
+                <p class="calismaText" id="calismaText" style="font-family: Gotham; margin-top: -10px; color: rgb(59, 59, 59); margin-left: 10px;">Sen de bize katıl ve yeni yüzyılda Türkiye'yi birlikte inşaa edelim!</p>    
+                <div class="gundemBtns">
+                    <a href="https://www.chpdusseldorfcevresi.de/calismalar" target="_blank" class="readMoreBtn">Daha Fazla Oku</a>
+                    <div class="gndmChangeBtnHolder">
+
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" class="gndmImg"><div class="imgFrame" id="imgFrame"></div></a>
+        </div>
+
+        <div class="haberFrame">
+            <h2 style="font-family: GothamBold;align-self: flex-start">Gündem</h2>
+            
+            <div class="haberHolder" id="haberHolder"></div>
+
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" style="color: black; text-decoration: none;font-family: GothamMed">Daha Fazla Oku -></a>
+
+
+            <script>
+                fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts?_embed')
+                .then(response => response.json())
+                .then((posts) => createDivs(posts))
+                .catch(error => console.error(error));
+    
+                function createDivs(posts){
+                    console.log(posts.length)
+                    calismalarFrame = document.getElementById("haberHolder")
+                    // Process and display posts
+
+                    var gundemAmount = 7;
+
+
+                    console.log(window.screen.width)
+
+                    if (window.screen.width <= 1200){
+                        var gundemAmount = 3;
+                    }
+    
+                    for (i = 1; i<gundemAmount; i++){
+                    
+                    console.log(posts)
         
+                    thumbnail = posts[i]["_embedded"]['wp:featuredmedia']['0']["source_url"]
+                    title = posts[i]["title"]["rendered"]    
+                    date = posts[i]["date"]
+                    ozet = posts[i]["excerpt"]["rendered"]
+                    id = posts[i]["id"]
+        
+                    
+                    // content = posts[1]["content"]["rendered"];
+                    // var contentObject = document.createElement('div');
+                    // contentObject.innerHTML = content;
+        
+                    // test = document.getElementById("test2");
+                    // test.appendChild(contentObject)
+    
+                            calismaDiv = document.createElement("a")
+                            calismaDiv.href = "/calisma.html?"+id
+                            calismaDiv.classList.add("calisma")
+    
+                            calismaImg = document.createElement("div")
+                            calismaImg.classList.add("calismaImg")
+    
+                            calismaImg.style.backgroundImage =  "url("+thumbnail+")"
+    
+                            calismaDiv.appendChild(calismaImg)
+    
+                            calismaDate = document.createElement("p")
+                            calismaDate.classList.add("calismaDate")
+                            calismaDate.innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
+                            calismaDiv.appendChild(calismaDate)
+    
+                            calismaTitle = document.createElement("h3")
+                            calismaTitle.classList.add("calismaTitle")
+                            calismaTitle.innerHTML = title
+                            calismaDiv.appendChild(calismaTitle)
+                            
+                            calismaText = document.createElement("p")
+                            calismaText.classList.add("calismaText")
+                            calismaText.innerHTML = ozet.split("<p>")[1]
+                            calismaDiv.appendChild(calismaText)
+                            
+                            calismalarFrame.appendChild(calismaDiv)
+                        }
+    
+                };
+    
+        </script>
+
+        </div>
+
+        <div class="canliFrame">
+            <h2 style="font-family: GothamBold; align-self: flex-start;">CHP DUS TV</h2>
+            <iframe width="100%" height="90%" src="https://www.youtube.com/embed/HaHZ0nAjy-A?si=7e4ckTVzKi8x7MAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+            <div class="line2" style="margin-top: 30px;"></div>
+        </div>
+
+        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="background-image: url(assets/test.png);background-size: cover; background-position: center;"></a>
+
+        <!--<div class="projelerFrame">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0ijGRc9EMsbCK7OLjK3xLP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3RDkH5ZWIfSb4yZEtMcYMv?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            bu<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3RDkH5ZWIfSb4yZEtMcYMv?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6RHqKR7OLt5a0vNPGvCvGp?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>-->
+
+        <div class="projelerFrame">
+          <div style="width: 90%; height: 10%;"><h1 style="font-family: GothamBold; align-self: flex-start;">Vizyon ve Hedef</h1></div>
+          <div class="projelerHolder">
+            <div class="proje" style="background-color:rgb(190, 190, 190); color: black;">
+                <h2>Gurbetteki Vatandaşlarımıza Tam Destek!</h2>
+                <p>Gurbetteki vatandaşlarımızın yanındayız!
+                    Birlikte daha güçlüyüz, birlikte daha güzel bir geleceğe ulaşacağız.
+                </p>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" style="color: black;">Daha fazla öğren -></a>
+            </div>
+            <div class="proje" style="background-color:var(--kirmizi) ;">
+                <h2>Beyin Göçü Desteği!</h2>
+                <p>Vatanından ayrılmak, bütün hayatını geride bırakıp, hiç bilmediğin bir ülkede, tanımadığın insanlarla yeni bir hayata başlamak hiç kolay değildir.
+                    Cumhuriyet Halk Partisi olarak senin burda evinde gibi hissetmen için elimizden geleni yapacağımıza emin olabilirsin.
+                </p>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
+            </div>
+            <div class="proje" style="background-color:var(--mavi) ;">
+                <h2>Geri Dönebileceğin bir Türkiye!</h2>
+                <p>Demokrasiye, özgürlüklere ve adalete dayalı bir Türkiye’nin hayalini kuruyoruz. Hep birlikte, bu hayali gerçeğe dönüştürmek için mücadele edeceğiz.
+                    Hep birlikte daha güzel günler göreceğimize inanıyor, umutla yarını bekliyoruz. Türkiye sevgisiyle dolu kalplerle, buradayız, senin yanındayız</p>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bizeKatilFrame">
+                <div class="bizeKatilHolder">
+                    <div class="bizeKatilIMG"></div>
+                    <div class="bizeKatilDetailsFrame">
+                        <div class="bizeKatilDetailsTitle">
+                            <h1 style="font-family: GothamBold;">Değişim Bizimle Mümkün!</h1>
+                        </div>
+                        <div>
+                            <p>Geçmişin Mirasıyla Yeni Yüzyılda Umut, Huzur, Adalet Dolu</p>
+                            <p style="margin-top: -10px;" class="bizekatiltext">Türkiye'yi Birlikte İnşaa Edelim!</p>
+                        </div>
+                        <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
+                    </div>
+                </div>
+        </div>
+
+        <!--
+                    <div class="bizeKatilFrame">
+
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                    <h3 style="font-family: GothamBold;">Değişim </h3>
+                    <h3 style="font-family: GothamBold;"> Bizimle Mümkün!</h3>
+                </div>
+
+                <div class="line2" style="margin-bottom: 30px;"></div>
+
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
+                
+
+                
+        </div>
+        -->
+
+        <a class="afis1 afis2" href="https://isimizgucumuz.net/" target="_blank">
+            <div class="afisTextFrame">
+                <div class="afisText">
+                    <h1>2024 YEREL SEÇİM BEYANNAMESİ</h1>
+                </div>
+                <div class="afisIMG"></div>
+            </div>
+        </a>
+
+        <div class="iletisimFrame" id="iletisim">
+            <div class="sosyalFrame">
+                <h2 style="justify-self: center; color: var(--mavi);">Sosyal Medya Hesaplarımız</h2>
+    
+                <div class="hesapFrame" style="display: flex; flex-direction: row; gap:10px; justify-content: space-evenly; width: 100%;">
+                    <div class="Facebook" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                        <a href="https://www.facebook.com/chpbirligi?ref=embed_page" target="_blank" class="fa fa-facebook" style="display:flex;color:white;background-color:#3B5998; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    </div>
+    
+                    <div class="Instagram" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                        <a href="https://www.instagram.com/chpdusseldorfcevresibirligi/" target="_blank" class="fa fa-instagram" style="display:flex;color:white;background-color:#dd4b39; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    </div>
+    
+                    <div class="Twitter" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                        <a href="https://twitter.com/chpdusseldorf" target="_blank" class="fa fa-twitter" style="display:flex;color:white;background-color:#55ACEE; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    </div>
+    
+                    <div class="whatsapp" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                        <a href="https://whatsapp.com/channel/0029VaMUxTU5a249Rb4U6G36" target="_blank" class="fa fa-whatsapp" style="display:flex;color:white;background-color:#00a300; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    </div>
+    
+                </div>
+            </div>
+
+
+            <div class="iletisim2" style="width: 50%; height: 50%;">
+                <div class="iletisimMap" style="width: 30%; height: 70%; margin-left: 10px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.2951244415067!2d6.773477699999999!3d51.489451499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8957d4760fbc7%3A0x613e2d343144a864!2sEmscherstra%C3%9Fe%20215%2C%2047166%20Duisburg!5e0!3m2!1sen!2sde!4v1703519238682!5m2!1sen!2sde" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+    
+                <div class="iletismDetails" style="margin-left: 25px; width: 60%; height: 70%;">
+                    <h2 style="color: var(--mavi); margin-left: 10px; font-family: Gotham;text-decoration: underline; margin-bottom:-10px ; text-shadow: rgb(255, 255, 255) 1px 0 10px;">İletişim</h2>
+                    <p style="margin-left: 10px; font-family: Gotham; margin-bottom: -10px; text-shadow: rgb(255, 255, 255) 1px 0 10px;">Büromuz en kısa zamanda tekrardan hizmetinize açılacaktır.</p>
+                    <span></span>
+                    <p style="margin-left: 10px; font-family: Gotham; text-shadow: rgb(255, 255, 255) 1px 0 10px;">--</p>
+                    <span></span>
+                    <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="tel:+49 1575 4274895">Tel.: +49 1575 4274895</a><p></p>
+                    <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham; margin-bottom: -10px;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="mailto:chpdusseldorfvecevresibirligi@gmail.com">Email: chpdusseldorfvecevresibirligi @gmail.com</a>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="footerFrame"></div>
+
     </div>
 
-    <script>
-        href = window.location.search
-        calismaId = parseInt(href.split("?")[1])
-
-        fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts/'+calismaId+"?_embed")
+<script>
+        fetch('https://public-api.wordpress.com/wp/v2/sites/chpdusseldorfgenc.wordpress.com/posts?_embed')
         .then(response => response.json())
         .then(posts => {
             // Process and display posts
-            console.log(posts);
+            thumbnail = posts[0]["_embedded"]['wp:featuredmedia']['0']["source_url"]
+            document.getElementById("imgFrame").style.backgroundImage = "url("+thumbnail+")"
 
-            thumbnail = posts["_embedded"]['wp:featuredmedia']['0']["source_url"]
-            title = posts["title"]["rendered"]
-            date = posts["date"]
-            ozet = posts["excerpt"]["rendered"]
-
-            document.getElementById("calismaImg").style.backgroundImage = "url("+thumbnail+")"
-            document.getElementById("calismaDate").innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
+            title = posts[0]["title"]["rendered"]
             document.getElementById("calismaTitle").innerHTML = title
 
-            
-            content = posts["content"]["rendered"];
+            date = posts[0]["date"]
+            document.getElementById("calismaDate").innerHTML = date.split("-")[2].split("T")[0]+"."+date.split("-")[1]+"."+date.split("-")[0]
 
-            calismaTextDiv = document.getElementById("calismaText");
-            calismaTextDiv.innerHTML = content;
-
-            var metaTitle = document.createElement('meta');
-            metaTitle.property = "og:title";
-            metaTitle.content = title;
-            document.getElementsByTagName('head')[0].appendChild(metaTitle);
-
-            var metaIMG = document.createElement('meta');
-            metaIMG.image = "og:title";
-            metaIMG.content = thumbnail;
-            document.getElementsByTagName('head')[0].appendChild(metaIMG);
-
-            var metaDesc = document.createElement('meta');
-            metaDesc.image = "og:description";
-            metaDesc.content = ozet;
-            document.getElementsByTagName('head')[0].appendChild(metaDesc);
+            ozet = posts[0]["excerpt"]["rendered"]
+            document.getElementById("calismaText").innerHTML = ozet.split("<p>")[1]
 
         })
         .catch(error => console.error(error));
+</script>
 
-
-    </script>
-    
 </body>
 </html>
+
+
+
