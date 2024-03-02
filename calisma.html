@@ -188,7 +188,7 @@ html, body {
 
             var metaTitle = document.createElement('meta');
             metaTitle.setAttribute('property', 'og:title');
-            metaTitle.content = title;
+            metaTitle.content = document.getElementById("calismaTitle").innerHTML;
             document.getElementsByTagName('head')[0].appendChild(metaTitle);
 
             var metaIMG = document.createElement('meta');
@@ -203,7 +203,7 @@ html, body {
 
             var metaURL = document.createElement('meta');
             metaURL.setAttribute('property', 'og:url');
-            metaURL.content = href;
+            metaURL.content = window.location.href;
             document.getElementsByTagName('head')[0].appendChild(metaURL);
         })
         .catch(error => console.error(error));
