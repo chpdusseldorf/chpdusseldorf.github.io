@@ -81,7 +81,7 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 45vh 60vh 30vh 70vh 10vh;
+        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 60vh 60vh 30vh 70vh 10vh;
         grid-template-areas: 
         "header"
         "video"
@@ -90,7 +90,7 @@ html, body {
         "haberler"
         "canli"
         "afiskatil"
-        "gundem"
+        "projeler"
         "bizekatil"
         "afis2"
         "iletisim"
@@ -117,7 +117,7 @@ html, body {
     .VidBttn{
         margin-top: -50px;
         display:flex;color:white;
-        background-color:var(--kirmizi); 
+        background-color:var(--mavi); 
         width: 275px; 
         height: 100px;  
 
@@ -129,6 +129,10 @@ html, body {
         font-family: GothamBold;
 
         margin-top: -150px;
+    }
+
+    .VidBttn:hover{
+        background-color:black;
     }
 
     .mainImgFrame{
@@ -260,7 +264,7 @@ html, body {
 
     @media screen and (max-width:800px) {
         .mainBody{
-            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 45vh 75vh 30vh 70vh 10vh;
+            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh auto 75vh 30vh 70vh 10vh;
             grid-template-areas: 
             "header"
             "main"
@@ -268,7 +272,7 @@ html, body {
             "afis1"
             "canli"
             "afiskatil"
-            "gundem"
+            "projeler"
             "bizekatil"
             "afis2"
             "iletisim"
@@ -311,9 +315,95 @@ html, body {
         align-items: center;
     }
 
-    .gundemFrame{
-        width: 65%;
-        height: 100%;
+    .projelerFrame{
+        width: 100%;
+        height: 130%;
+
+        background-color: #3580f02f;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        margin-top: -40px;
+    }
+
+    .projelerHolder{
+        width: 90%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .proje{
+        width: 90%;
+        height: 90%;
+
+        display: flex;
+        flex-direction: column;
+
+        color: white;
+
+        box-shadow: 0px 0px 35px 0px rgba(46,0,0,0.28);    
+    }
+
+    .proje:hover{
+        box-shadow: 0px 0px 35px 0px rgba(46, 0, 0, 0.575);   
+    }
+
+    .proje h2{
+        font-family: GothamBold;
+
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+
+    .proje p{
+        width: 90%;
+
+        align-self: center;
+    }
+
+    .proje a{
+        color: white; margin-left: 20px; text-decoration: none; margin-top: 50px; font-family: GothamMed;
+    }
+
+    .proje a:hover{opacity: .5;}
+
+    @media screen and (max-width:1000px) {
+        .projelerFrame{
+            width: 100%;
+            min-height: 100vh;
+            height: fit-content;
+            margin-top: 0px;
+
+            background:none;
+        }
+        .projelerHolder{
+            display: grid;
+            grid-template-columns: 100%;
+
+            gap: 20px;
+            
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+
+            height: fit-content;
+        }
+
+        .proje{
+            width: 100%;
+            height: fit-content;
+            min-height: 400px;
+        }
     }
 
     .iletisimFrame{
@@ -398,12 +488,16 @@ html, body {
         margin-top: 20px;
     }
 
+    .bizeKtlBttn:hover{
+        opacity: .5;
+    }
+
     @media screen and (max-width:800px) {
         .iletisimMap{
             display: none;
         }
 
-        .gundemFrame{
+        .projelerFrame{
             width: 90%;
         }
 
@@ -567,7 +661,7 @@ html, body {
         <div class="videoFrame">
             <video src="assets/sendebirtohumek.mp4" style="max-width: 100%; height: 100%; margin-top: -15px;" muted autoplay loop></video>
             <div class="katilButtnFrame">
-                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="VidBttn" style="z-index: 2; margin-top: -50px; background-color: #002B6B;">BİZE KATIL!</a>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="VidBttn" style="z-index: 2; margin-top: -50px;">BİZE KATIL!</a>
             </div>
         </div>
 
@@ -686,18 +780,44 @@ html, body {
 
         <a class="afis1" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="background-image: url(assets/test.png);background-size: cover; background-position: center;"></a>
 
-        <div class="gundemFrame">
-            <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0ijGRc9EMsbCK7OLjK3xLP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+        <!--<div class="projelerFrame">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0ijGRc9EMsbCK7OLjK3xLP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
-
-            <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3RDkH5ZWIfSb4yZEtMcYMv?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3RDkH5ZWIfSb4yZEtMcYMv?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6RHqKR7OLt5a0vNPGvCvGp?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+            bu<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3RDkH5ZWIfSb4yZEtMcYMv?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <!--<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6RHqKR7OLt5a0vNPGvCvGp?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/45xXZvUBRtn3wP2nnqYmf8?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>-->
+
+        <div class="projelerFrame">
+          <div style="width: 90%; height: 10%;"><h1 style="font-family: GothamBold; align-self: flex-start;">Vizyon ve Hedef</h1></div>
+          <div class="projelerHolder">
+            <div class="proje" style="background-color:rgb(190, 190, 190); color: black;">
+                <h2>Gurbetteki Vatandaşlarımıza Tam Destek!</h2>
+                <p>Gurbetteki vatandaşlarımızın yanındayız!
+                    Birlikte daha güçlüyüz, birlikte daha güzel bir geleceğe ulaşacağız.
+                </p>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" style="color: black;">Daha fazla öğren -></a>
+            </div>
+            <div class="proje" style="background-color:var(--kirmizi) ;">
+                <h2>Beyin Göçü Desteği!</h2>
+                <p>Vatanından ayrılmak, bütün hayatını geride bırakıp, hiç bilmediğin bir ülkede, tanımadığın insanlarla yeni bir hayata başlamak hiç kolay değildir.
+                    Cumhuriyet Halk Partisi olarak senin burda evinde gibi hissetmen için elimizden geleni yapacağımıza emin olabilirsin.
+                </p>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
+            </div>
+            <div class="proje" style="background-color:var(--mavi) ;">
+                <h2>Geri Dönebileceğin bir Türkiye!</h2>
+                <p>Demokrasiye, özgürlüklere ve adalete dayalı bir Türkiye’nin hayalini kuruyoruz. Hep birlikte, bu hayali gerçeğe dönüştürmek için mücadele edeceğiz.
+                    Hep birlikte daha güzel günler göreceğimize inanıyor, umutla yarını bekliyoruz. Türkiye sevgisiyle dolu kalplerle, buradayız, senin yanındayız</p>
+                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
+            </div>
+          </div>
         </div>
 
 
