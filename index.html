@@ -260,7 +260,7 @@ html, body {
 
     @media screen and (max-width:800px) {
         .mainBody{
-            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 45vh 60vh 30vh 70vh 10vh;
+            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 45vh 75vh 30vh 70vh 10vh;
             grid-template-areas: 
             "header"
             "main"
@@ -292,7 +292,7 @@ html, body {
         }
 
         .haberFrame{
-            width: 100%;
+            width: 90%;
         }
 
         .haberHolder{
@@ -433,13 +433,20 @@ html, body {
             border: none;
         }
 
-        .bizekatiltext{
-            border-bottom: black solid 1px;
-            padding-bottom: 20px;
+        .bizeKatilHolder{
+            flex-direction: column;
         }
 
         .bizeKatilIMG{
-            display: none;
+            width: 75%;
+            height: 60%;
+
+            margin-top: -20vh;
+        }
+
+        .bizeKatilDetailsFrame{
+            height: 30%;
+            width: 100%;
         }
     }
 
