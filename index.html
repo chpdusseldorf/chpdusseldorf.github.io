@@ -87,7 +87,7 @@ html, body {
 
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 60vh 60vh 30vh 70vh 10vh;
+        grid-template-rows: 20vh 100vh 30vh 60vh auto 60vh 25vh 25vh 60vh 60vh 30vh 70vh 10vh;
         grid-template-areas: 
         "header"
         "video"
@@ -95,6 +95,7 @@ html, body {
         "main"
         "haberler"
         "canli"
+        "sosyalmedya"
         "afiskatil"
         "projeler"
         "bizekatil"
@@ -270,13 +271,14 @@ html, body {
 
     @media screen and (max-width:800px) {
         .mainBody{
-            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh auto 75vh 30vh 70vh 10vh;
+            grid-template-rows: 20vh 80vh auto 30vh 60vh 25vh 25vh auto 75vh 30vh 70vh 10vh;
             grid-template-areas: 
             "header"
             "main"
             "haberler"
             "afis1"
             "canli"
+            "sosyalmedya"
             "afiskatil"
             "projeler"
             "bizekatil"
@@ -784,6 +786,29 @@ html, body {
             <div class="line2" style="margin-top: 30px;"></div>
         </div>
 
+        <div class="sosyalFrame">
+            <h2 style="justify-self: center; color: var(--mavi);">Sosyal Medya Hesaplarımız</h2>
+
+            <div class="hesapFrame" style="display: flex; flex-direction: row; gap:10px; justify-content: space-evenly; width: 100%;">
+                <div class="Facebook" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                    <a href="https://www.facebook.com/chpbirligi?ref=embed_page" target="_blank" class="fa fa-facebook" style="display:flex;color:white;background-color:#3B5998; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                </div>
+
+                <div class="Instagram" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                    <a href="https://www.instagram.com/chpdusseldorfcevresibirligi/" target="_blank" class="fa fa-instagram" style="display:flex;color:white;background-color:#dd4b39; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                </div>
+
+                <div class="Twitter" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                    <a href="https://twitter.com/chpdusseldorf" target="_blank" class="fa fa-twitter" style="display:flex;color:white;background-color:#55ACEE; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                </div>
+
+                <div class="whatsapp" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
+                    <a href="https://whatsapp.com/channel/0029VaMUxTU5a249Rb4U6G36" target="_blank" class="fa fa-whatsapp" style="display:flex;color:white;background-color:#00a300; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                </div>
+
+            </div>
+        </div>
+
         <a class="afis1" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="background-image: url(assets/test.png);background-size: cover; background-position: center;"></a>
 
         <!--<div class="projelerFrame">
@@ -871,25 +896,38 @@ html, body {
 
         <div class="iletisimFrame" id="iletisim">
             <div class="sosyalFrame">
-                <h2 style="justify-self: center; color: var(--mavi);">Sosyal Medya Hesaplarımız</h2>
-    
-                <div class="hesapFrame" style="display: flex; flex-direction: row; gap:10px; justify-content: space-evenly; width: 100%;">
-                    <div class="Facebook" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                        <a href="https://www.facebook.com/chpbirligi?ref=embed_page" target="_blank" class="fa fa-facebook" style="display:flex;color:white;background-color:#3B5998; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                <div class="emailFrame">
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                          #mc_embed_signup{false;clear:left; font:14px Helvetica,Arial,sans-serif; width: px;}
+                          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://chpdusseldorfcevresi.us10.list-manage.com/subscribe/post?u=65c27c49aa161ac0eb11033e5&amp;id=772d839dac&amp;f_id=0023d6e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>CHP DÜS. E-Bülten Üyeliği</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> zorunlu</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Adresiniz<span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_65c27c49aa161ac0eb11033e5_772d839dac" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iK1OF2" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
                     </div>
-    
-                    <div class="Instagram" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                        <a href="https://www.instagram.com/chpdusseldorfcevresibirligi/" target="_blank" class="fa fa-instagram" style="display:flex;color:white;background-color:#dd4b39; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
-                    </div>
-    
-                    <div class="Twitter" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                        <a href="https://twitter.com/chpdusseldorf" target="_blank" class="fa fa-twitter" style="display:flex;color:white;background-color:#55ACEE; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
-                    </div>
-    
-                    <div class="whatsapp" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                        <a href="https://whatsapp.com/channel/0029VaMUxTU5a249Rb4U6G36" target="_blank" class="fa fa-whatsapp" style="display:flex;color:white;background-color:#00a300; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
-                    </div>
-    
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    
                 </div>
             </div>
 
