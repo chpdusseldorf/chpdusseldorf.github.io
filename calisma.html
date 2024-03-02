@@ -183,6 +183,22 @@ html, body {
 
             calismaTextDiv = document.getElementById("calismaText");
             calismaTextDiv.innerHTML = content;
+
+            var metaTitle = document.createElement('meta');
+            metaTitle.property = "og:title";
+            metaTitle.content = title;
+            document.getElementsByTagName('head')[0].appendChild(metaTitle);
+
+            var metaIMG = document.createElement('meta');
+            metaIMG.image = "og:title";
+            metaIMG.content = thumbnail;
+            document.getElementsByTagName('head')[0].appendChild(metaIMG);
+
+            var metaDesc = document.createElement('meta');
+            metaDesc.image = "og:description";
+            metaDesc.content = ozet;
+            document.getElementsByTagName('head')[0].appendChild(metaDesc);
+
         })
         .catch(error => console.error(error));
 
