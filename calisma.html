@@ -187,22 +187,22 @@ html, body {
             calismaTextDiv.innerHTML = content;
 
             var metaTitle = document.createElement('meta');
-            metaTitle.property = "og:title";
+            metaTitle.setAttribute('property', 'og:title');
             metaTitle.content = title;
             document.getElementsByTagName('head')[0].appendChild(metaTitle);
 
             var metaIMG = document.createElement('meta');
-            metaIMG.image = "og:title";
+            metaIMG.setAttribute('property', 'og:image');
             metaIMG.content = thumbnail;
             document.getElementsByTagName('head')[0].appendChild(metaIMG);
 
             var metaDesc = document.createElement('meta');
-            metaDesc.image = "og:description";
+            metaDesc.setAttribute('property', 'og:description');
             metaDesc.content = ozet;
             document.getElementsByTagName('head')[0].appendChild(metaDesc);
 
             var metaURL = document.createElement('meta');
-            metaURL.image = "og:url";
+            metaURL.setAttribute('property', 'og:url');
             metaURL.content = href;
             document.getElementsByTagName('head')[0].appendChild(metaURL);
         })
