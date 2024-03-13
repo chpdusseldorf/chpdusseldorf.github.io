@@ -20,7 +20,7 @@
 
         background-color: var(--mavi); 
 
-        z-index: 9999;
+        z-index: 9998;
     }
 
     .tpHeaderFrame{
@@ -40,6 +40,11 @@
         justify-content: center;
 
         margin-bottom: 10px;
+
+        background-color: white;
+
+        -webkit-box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15); 
+        box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
     }
 
     .mHeaderFrame{
@@ -53,15 +58,18 @@
 
     .mHeaderLogos{
         width: 20%;
-        height: 100%;
+        height: 115%;
 
         display: flex;
 
-        margin-top: 10px;
+        margin-top: -0px;
+        margin-right: 10px;
+
+        z-index: 9999;
     }
 
     .mHeaderBttmL{
-        
+    margin-top: -10px;
       display: flex;
     }
 
@@ -86,11 +94,11 @@
 
 
     .headerLink:hover{
-        color: var(--kirmizi);
+        color: var(--kirmizi) !important;
     }
     
     .katilLink:hover{
-        color: var(--beyaz);
+        opacity: .3 !important;
     }
 
     .headerLink:visited{
@@ -174,6 +182,13 @@
             display: none;
         }
     }
+
+    .headerLogo{
+        min-width: 49%; 
+        min-height: 100%; 
+        background-size: contain; 
+        background-repeat: no-repeat;
+    }
   
 </style>
 
@@ -188,8 +203,8 @@
 <div class="mHeader">
     <div class="mHeaderFrame">
         <div class="mHeaderLogos">
-            <div class="chplogo" style="background-image: url(assets/CHP-Dikey-Logo.webp); min-width: 49%; min-height: 100%; background-size: contain; background-repeat: no-repeat;"></div>
-            <div class="duslogo" style="background-image: url(assets/chpduslogo.webp); min-width: 49%; min-height: 100%; background-size: contain; background-repeat: no-repeat;"></div>
+            <div class="chplogo headerLogo" style="background-image: url(assets/CHP-Dikey-Logo.webp); "></div>
+            <div class="duslogo headerLogo" style="background-image: url(assets/chpduslogo.webp);"></div>
         </div>
 
         <div class="mHeaderLinks">
