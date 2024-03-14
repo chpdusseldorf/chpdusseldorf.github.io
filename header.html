@@ -202,7 +202,7 @@
   <div class="tpHeader">
     <div class="tpHeaderFrame">
         <p style="color: var(--beyaz);">"Frieden in der Heimat, Frieden auf der Welt"</p>
-        <img src="assets/header-banner-img-3.webp" style="height: 100%; display: relative;" alt="ataturk-banner-img">
+        <img src="assets/header-banner-img-3.webp" style="height: 100%; display: relative;">
     </div>
 </div>
 
@@ -226,25 +226,7 @@
             </div>
         </div>
 
-        <button onclick="openMenu()" id="menubtn">☰</button>
-
-        <script>
-            open = false
-
-            function openMenu(){
-                open = !open
-
-                if (!open){
-                    document.getElementById("menu").style.display = "flex"
-                    document.getElementById("menu").style.opacity = "1"
-                }else{
-                    document.getElementById("menu").style.display = "none"
-                    document.getElementById("menu").style.opacity = "0";
-                    
-                }
-            }
-
-        </script>
+        <button onclick="openMenu();function openMenu(){open=!open;if(!open){document.getElementById('menu').style.display='flex';document.getElementById('menu').style.opacity='1'}else{document.getElementById('menu').style.display='none';document.getElementById('menu').style.opacity='0'}}" id="menubtn">☰</button>
 
 </div>
 
