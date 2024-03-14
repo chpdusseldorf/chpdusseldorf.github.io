@@ -27,7 +27,7 @@
 
     <title>CHP Düsseldorf ve Çevresi</title>
     
-    <link rel="stylesheet" type="text/css" href="files/style.css" media=”screen” />
+    <!--<link rel="stylesheet" type="text/css" href="files/style.css" media=”screen” />-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -40,13 +40,13 @@
 
     <!------------------------HEADER & FOOTER LOAD--------------------------------------------------------------------------------------------->
     
-    <script src="jquery.js"></script> 
+    <!--<script src="jquery.js" preload></script> -->
 
-    <script>
-        $(function(){
+    <script async defer>
+       /* $(function(){
             $(".headerFrame").load("header.html"); 
             $(".footerFrame").load("footer.html"); 
-        });
+        });*/
     </script> 
     
 </head>
@@ -223,7 +223,6 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
 
 
     .imgFrame{
-        background-image: url(calismalar/placeholder.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -706,7 +705,13 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
 
 <body>
     <div class="mainBody">
-        <div class="headerFrame" style="z-index:100000"></div>
+        <div class="headerFrame" style="z-index:100000" id="headerFrame">
+            <script async defer>
+                fetch('header.html')
+                .then(response=> response.text())
+                .then(text=> document.getElementById('headerFrame').innerHTML = text);
+            </script> 
+        </div>
 
         <div class="videoFrame">
          <video src="assets/sendebirtohumek.mp4" style="max-width: 100%; height: 100%; margin-top: -20px; border: 1px solid rgba(0, 0, 0, 0.082);-webkit-box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15); 
@@ -715,17 +720,17 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
                 <!--<a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="VidBttn" style="z-index: 2; margin-top: -50px;">BİZE KATIL!</a>-->
                 <h2 style=" margin-top: 25px; font-family: GothamBold; width: 100%;text-align: center;">#sendebirtohumek</h2>
                 <div class="mainKtlImg" style="width: 90%; height: 30%; background-image: url(assets/bizekatilimg2.jpeg);background-position: center; background-size: cover;margin-top: -20px;"></div>
-                <a class="mainKtlBttn" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="height: 13%;" target="_blank">Gönüllü Ol</a>
-                <a class="mainKtlBttn" href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Üye Ol</a>
-                <a class="mainKtlBttn" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="height: 13%;" target="_blank">Haberdar Ol</a>
-                <a class="mainKtlBttn" style="height: 10%; margin-bottom: 10px; background-color: var(--kirmizi); border-radius: 10px;" target="_blank" href="https://www.chpdusseldorfcevresi.de/bizekatil">Bağış Yap</a>
+                <a class="mainKtlBttn" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="height: 13%;" target="_blank" aria-label="Birliğimize Gönüllü Ol">Gönüllü Ol</a>
+                <a class="mainKtlBttn" href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" aria-label="Birliğimize Üye Ol">Üye Ol</a>
+                <a class="mainKtlBttn" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="height: 13%;" target="_blank" aria-label="Birliğimizden Haberdar Ol">Haberdar Ol</a>
+                <a class="mainKtlBttn" style="height: 10%; margin-bottom: 10px; background-color: var(--kirmizi); border-radius: 10px;" target="_blank" href="https://www.chpdusseldorfcevresi.de/bizekatil" aria-label="Bağışta Bulun">Bağış Yap</a>
             </div>
         </div>
 
-        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/calisma?52">
+        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/calisma?52" aria-label="Almanya'ya ilk adımından itibaren yapman gereken 8 şey">
             <div class="afisTextFrame">
                 <div class="afisText">
-                    <h1>ALMANYA'YA HOŞ GELDİN!</h1>
+                    <h2>ALMANYA'YA HOŞ GELDİN!</h2>
                     <h3 style="margin-top: -20px;">İşte ilk adımından itibaren yapman gereken 8 şey!</h3>
                 </div>
                 <div class="afisIMG"></div>
@@ -739,13 +744,13 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
                 <h2 class="calismaTitle" id="calismaTitle" style="font-family: GothamBold; text-transform: capitalize; margin-left: 10px;margin-top: -10px;">Hoş Geldin..!</h2>
                 <p class="calismaText" id="calismaText" style="font-family: Gotham; margin-top: -10px; color: rgb(59, 59, 59); margin-left: 10px;"></p>    
                 <div class="gundemBtns">
-                    <a href="https://www.chpdusseldorfcevresi.de/calismalar" target="_blank" class="readMoreBtn">Daha Fazla Oku</a>
+                    <a href="https://www.chpdusseldorfcevresi.de/calismalar" target="_blank" class="readMoreBtn" aria-label="Çalışmalarımız">Daha Fazla Oku</a>
                     <div class="gndmChangeBtnHolder">
 
                     </div>
                 </div>
             </div>
-            <a href="https://www.chpdusseldorfcevresi.de/calismalar" class="gndmImg"><div class="imgFrame" id="imgFrame"></div></a>
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" class="gndmImg"><div class="imgFrame" id="imgFrame" aria-label="Çalışmalarımız"></div></a>
         </div>
 
         <div class="haberFrame">
@@ -753,7 +758,7 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
             
             <div class="haberHolder" id="haberHolder"></div>
 
-            <a href="https://www.chpdusseldorfcevresi.de/calismalar" style="color: black; text-decoration: none;font-family: GothamMed">Daha Fazla Oku -></a>
+            <a href="https://www.chpdusseldorfcevresi.de/calismalar" style="color: black; text-decoration: none;font-family: GothamMed" aria-label="Çalışmalarımız">Daha Fazla Oku -></a>
 
 
             <script>
@@ -763,23 +768,19 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
                 .catch(error => console.error(error));
     
                 function createDivs(posts){
-                    console.log(posts.length)
                     calismalarFrame = document.getElementById("haberHolder")
                     // Process and display posts
 
                     var gundemAmount = 7;
 
 
-                    console.log(window.screen.width)
 
                     if (window.screen.width <= 1200){
                         var gundemAmount = 3;
                     }
     
                     for (i = 1; i<gundemAmount; i++){
-                    
-                    console.log(posts)
-        
+                            
                     thumbnail = posts[i]["_embedded"]['wp:featuredmedia']['0']["source_url"]
                     title = posts[i]["title"]["rendered"]    
                     date = posts[i]["date"]
@@ -831,7 +832,7 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
 
         <div class="canliFrame">
             <h2 style="font-family: GothamBold; align-self: flex-start;">CHP DUS TV</h2>
-            <iframe width="100%" height="90%" src="https://www.youtube.com/embed/HaHZ0nAjy-A?si=7e4ckTVzKi8x7MAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+            <iframe loading="lazy" width="100%" height="90%" src="https://www.youtube.com/embed/HaHZ0nAjy-A?si=7e4ckTVzKi8x7MAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
             <div class="line2" style="margin-top: 30px;"></div>
         </div>
 
@@ -840,25 +841,25 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
 
             <div class="hesapFrame" style="display: flex; flex-direction: row; gap:10px; justify-content: space-evenly; width: 100%;">
                 <div class="Facebook" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                    <a href="https://www.facebook.com/chpbirligi?ref=embed_page" target="_blank" class="fa fa-facebook" style="display:flex;color:white;background-color:#3B5998; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    <a aria-label="Facebook Hesabımız" href="https://www.facebook.com/chpbirligi?ref=embed_page" target="_blank" class="fa fa-facebook" style="display:flex;color:white;background-color:#3B5998; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
                 </div>
 
                 <div class="Instagram" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                    <a href="https://www.instagram.com/chpdusseldorfcevresibirligi/" target="_blank" class="fa fa-instagram" style="display:flex;color:white;background-color:#dd4b39; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    <a aria-label="Instagram Hesabımız" href="https://www.instagram.com/chpdusseldorfcevresibirligi/" target="_blank" class="fa fa-instagram" style="display:flex;color:white;background-color:#dd4b39; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
                 </div>
 
                 <div class="Twitter" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                    <a href="https://twitter.com/chpdusseldorf" target="_blank" class="fa fa-twitter" style="display:flex;color:white;background-color:#55ACEE; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    <a aria-label="Twitter Hesabımız" href="https://twitter.com/chpdusseldorf" target="_blank" class="fa fa-twitter" style="display:flex;color:white;background-color:#55ACEE; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
                 </div>
 
                 <div class="whatsapp" style="display: flex;flex-direction: column;justify-content: center; align-items: center;">
-                    <a href="https://whatsapp.com/channel/0029VaMUxTU5a249Rb4U6G36" target="_blank" class="fa fa-whatsapp" style="display:flex;color:white;background-color:#00a300; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
+                    <a aria-label="Whatsapp Grubumuz" href="https://whatsapp.com/channel/0029VaMUxTU5a249Rb4U6G36" target="_blank" class="fa fa-whatsapp" style="display:flex;color:white;background-color:#00a300; font-size: 30px;width: 75px; height: 75px;  text-align: center; align-items: center; justify-content: center; text-decoration: none; border-radius: 10px;"></a>
                 </div>
 
             </div>
         </div>
 
-        <a class="afis1" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="background-image: url(assets/test.png);background-size: cover; background-position: center;"></a>
+        <a class="afis1" aria-label="Bize Katıl" href="https://www.chpdusseldorfcevresi.de/bizekatil" style="background-image: url(assets/test.png);background-size: cover; background-position: center;"></a>
 
         <!--<div class="projelerFrame">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0ijGRc9EMsbCK7OLjK3xLP?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -882,20 +883,20 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
                 <p>Gurbetteki vatandaşlarımızın yanındayız!
                     Birlikte daha güçlüyüz, birlikte daha güzel bir geleceğe ulaşacağız.
                 </p>
-                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" style="color: black;">Daha fazla öğren -></a>
+                <a aria-label="Gurbetteki Vatandaşlarımıza Tam Destek" href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" style="color: black;">Daha fazla öğren -></a>
             </div>
             <div class="proje" style="background-color:var(--kirmizi) ;">
                 <h2>Beyin Göçü Desteği!</h2>
                 <p>Vatanından ayrılmak, bütün hayatını geride bırakıp, hiç bilmediğin bir ülkede, tanımadığın insanlarla yeni bir hayata başlamak hiç kolay değildir.
                     Cumhuriyet Halk Partisi olarak senin burda evinde gibi hissetmen için elimizden geleni yapacağımıza emin olabilirsin.
                 </p>
-                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
+                <a aria-label="Beyin Göçü Desteği" href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
             </div>
             <div class="proje" style="background-color:var(--mavi) ;">
                 <h2>Geri Dönebileceğin bir Türkiye!</h2>
                 <p>Demokrasiye, özgürlüklere ve adalete dayalı bir Türkiye’nin hayalini kuruyoruz. Hep birlikte, bu hayali gerçeğe dönüştürmek için mücadele edeceğiz.
                     Hep birlikte daha güzel günler göreceğimize inanıyor, umutla yarını bekliyoruz. Türkiye sevgisiyle dolu kalplerle, buradayız, senin yanındayız</p>
-                <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
+                <a aria-label="Geri Dönebileceğin Bir Türkiye" href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank">Daha fazla öğren -></a>
             </div>
           </div>
         </div>
@@ -912,7 +913,7 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
                             <p>Geçmişin Mirasıyla Yeni Yüzyılda Umut, Huzur, Adalet Dolu</p>
                             <p style="margin-top: -10px;" class="bizekatiltext">Türkiye'yi Birlikte İnşaa Edelim!</p>
                         </div>
-                        <a href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
+                        <a aria-label="Bize Katıl" href="https://www.chpdusseldorfcevresi.de/bizekatil" target="_blank" class="bizeKtlBttn">BİZE KATIL!</a>
                     </div>
                 </div>
         </div>
@@ -934,7 +935,7 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
         </div>
         -->
 
-        <a class="afis1 afis2" href="https://isimizgucumuz.net/" target="_blank">
+        <a class="afis1 afis2" href="https://isimizgucumuz.net/" target="_blank" aria-label="İşimiz Gücümüz Türkiye">
             <div class="afisTextFrame">
                 <div class="afisText">
                     <h1>2024 YEREL SEÇİM BEYANNAMESİ</h1>
@@ -945,39 +946,7 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
 
         <div class="iletisimFrame" id="iletisim">
             <div class="sosyalFrame">
-                <div class="emailFrame">
-                    <div id="mc_embed_shell">
-                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-                    <style type="text/css">
-                          #mc_embed_signup{false;clear:left; font:14px Helvetica,Arial,sans-serif; width: px;}
-                          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    </style>
-                    <div id="mc_embed_signup">
-                      <form action="https://chpdusseldorfcevresi.us10.list-manage.com/subscribe/post?u=65c27c49aa161ac0eb11033e5&amp;id=772d839dac&amp;f_id=0023d6e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                          <div id="mc_embed_signup_scroll"><h2>CHP DÜS. E-Bülten Üyeliği</h2>
-                              <div class="indicates-required"><span class="asterisk">*</span> zorunlu</div>
-                              <div class="mc-field-group"><label for="mce-EMAIL">Email Adresiniz<span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-                          <div id="mce-responses" class="clear foot">
-                              <div class="response" id="mce-error-response" style="display: none;"></div>
-                              <div class="response" id="mce-success-response" style="display: none;"></div>
-                          </div>
-                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                          <input type="text" name="b_65c27c49aa161ac0eb11033e5_772d839dac" tabindex="-1" value="">
-                      </div>
-                          <div class="optionalParent">
-                              <div class="clear foot">
-                                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iK1OF2" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-                              </div>
-                          </div>
-                      </div>
-                    </form>
-                    </div>
-                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-                    
-                </div>
+                <div class="emailFrame"></div>
             </div>
 
 
@@ -992,15 +961,23 @@ box-shadow: 0px 5px 19px -8px rgba(0,0,0,0.15);
                     <span></span>
                     <p style="margin-left: 10px; font-family: Gotham; text-shadow: rgb(255, 255, 255) 1px 0 10px;">--</p>
                     <span></span>
-                    <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="tel:+49 1575 4274895">Tel.: +49 1575 4274895</a><p></p>
-                    <a  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham; margin-bottom: -10px;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="mailto:info@chpdusseldorfcevresi.de" target="_blank">Email: info@chpdusseldorfcevresi.de</a>
+                    <a aria-label="Telefon Numaramız"  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="tel:+49 1575 4274895">Tel.: +49 1575 4274895</a><p></p>
+                    <a aria-label="Email Adresimiz"  style="color: black;text-decoration: none;margin-left: 10px; font-family: Gotham; margin-bottom: -10px;font-weight: 500; text-shadow: rgb(255, 255, 255) 1px 0 10px;" href="mailto:info@chpdusseldorfcevresi.de" target="_blank">Email: info@chpdusseldorfcevresi.de</a>
                 </div>
             </div>
 
             
         </div>
 
-        <div class="footerFrame"></div>
+        <div class="footerFrame" id="footerFrame">
+            <script async defer>
+
+                fetch('footer.html')
+                .then(response=> response.text())
+                .then(text=> document.getElementById('footerFrame').innerHTML = text);
+
+            </script> 
+        </div>
 
     </div>
 
