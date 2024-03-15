@@ -6,6 +6,8 @@
         width: 100%;
         height: 100%;
 
+        max-height: 175px;
+
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -82,6 +84,10 @@
     .mHeaderLinks{
         width: inherit;
         height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
 
@@ -152,20 +158,22 @@
         display: none;
 
         background-color: var(--beyaz);
-        box-shadow: 7px 7px 5px lightblue;
+        border: 1px solid rgba(0, 0, 0, 0.308);
+        border-radius: 3px;
         outline: none;
-        border: none;
 
 
         width: 50px;
         height: 50px;
 
         z-index: 2;
-
-        border-radius: 5px;
     }
 
-    @media screen and (max-width:815px) {
+    @media screen and (max-width:800px) {
+        .mHeaderFrame{
+            width: 100%; 
+            flex-direction: row-reverse;
+        }
         .tpHeaderFrame p{
             display: none;
         }
@@ -180,6 +188,13 @@
 
         #menu{
             display: none;
+        }
+        .mHeaderLinks{
+            display: block;
+            justify-self: flex-end;
+            order: 1;
+            margin-left: 20px;
+            width: 75%;
         }
     }
 
